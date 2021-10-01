@@ -1,0 +1,57 @@
+@media screen and (min-width:992px) {
+    .about-mobile {
+        display: none !important;
+    }
+    .about-desktop {
+        display: flex !important;
+        flex-direction: column !important;
+        height: 100vh;
+        background-color: var(--secondary-color);
+    }
+    .about-tabs {
+        height: 20%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .about-tabs span {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
+        cursor: pointer;
+       
+    }
+    .tab{
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: bolder;
+        color: black;
+    }
+    .tab-content-about {
+        width: 70%;
+        text-align: justify;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly !important;
+        transition:display 1s ease;
+        height: 80%;
+       
+    }
+    .tab-content-about p {
+        font-size: 18px!important;
+        font-weight: 300;
+        font-style: italic;
+    }
+    .tab-content-about h4 {
+        font-size: 20px!important;
+    }
+    .tab-active {
+        background-color: #f1534d;
+        transition: background-color 0.5s ease;
+        color: var(--secondary-color);
+
+    }
+}

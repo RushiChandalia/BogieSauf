@@ -3,6 +3,7 @@
     height:300px;
     background-image: url(../../../Images/pexels-anni-roenkae-3109807.jpg);
     background-size: cover;
+ 
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -25,6 +26,9 @@
 .card-content p{
     margin: 0 !important;
     font-size: 12px;
+    width: 80%;
+    text-align:center !important;
+    
 }
 .card-wrapper img{
     height:100px;

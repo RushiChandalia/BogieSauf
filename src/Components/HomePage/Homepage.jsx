@@ -21,7 +21,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      {window.outerWidth > 992 ?  <div className="container bottom-info">
+      <div className="container bottom-info">
         {
             INFO["information-home"].map((info, i)=>(
                 <div key={i} className="info-card">
@@ -33,7 +33,7 @@ const HomePage = () => {
                 </div>
             ))
         }
-    </div> : console.log("h2")}
+    </div>
     
    
     </div>

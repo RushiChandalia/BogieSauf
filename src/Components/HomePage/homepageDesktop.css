@@ -46,7 +46,7 @@
   .home-page .bottom-info {
     height: 20%;
     padding: 0px var(--side-padding);
-    display: grid;
+    display: grid !important;
     grid-template-columns: auto auto auto;
     align-items: center;
     justify-content: space-between;

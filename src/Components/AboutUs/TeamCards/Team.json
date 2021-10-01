@@ -1,82 +1,66 @@
 {
-    "Team":[
+  "Team": [
+    {
+      "name": "Mayur Mahla",
+      "position": "Co-Founder & CEO",
+      "Socials": [
         {
-            "name": "Mayur Mahla",
-            "position": "Co-Founder & CEO",
-            "Socials":[
-                {
-                    "plat":"LinkedIn",
-                    "Link":""
-                },
-                {
-                    "plat":"Twitter",
-                    "Link":""
-                },
-                {
-                    "plat":"Instagram",
-                    "Link":""
-                },
-                {
-                    "plat":"Facebook",
-                    "Link":""
-                },
-                {
-                    "plat":"Youtube",
-                    "Link":""
-                }
-            ]
+          "plat": "LinkedIn",
+          "Link": "https://www.linkedin.com/in/mayur-mahla-36465419a/"
         },
         {
-            "name": "Gaurav Chale",
-            "position": "Co-Founder",
-            "Socials":[
-                {
-                    "plat":"LinkedIn",
-                    "Link":""
-                },
-                {
-                    "plat":"Twitter",
-                    "Link":""
-                },
-                {
-                    "plat":"Instagram",
-                    "Link":""
-                },
-                {
-                    "plat":"Facebook",
-                    "Link":""
-                },
-                {
-                    "plat":"Youtube",
-                    "Link":""
-                }
-            ]
+          "plat": "Twitter",
+          "Link": "https://twitter.com/I_Mayur_07/"
         },
         {
-            "name": "Ranu Agrawal",
-            "position": "Social Media Manager & Content Creator",
-            "Socials":[
-                {
-                    "plat":"LinkedIn",
-                    "Link":""
-                },
-                {
-                    "plat":"Twitter",
-                    "Link":""
-                },
-                {
-                    "plat":"Instagram",
-                    "Link":""
-                },
-                {
-                    "plat":"Facebook",
-                    "Link":""
-                },
-                {
-                    "plat":"Youtube",
-                    "Link":""
-                }
-            ]
+          "plat": "Instagram",
+          "Link": "https://www.instagram.com/mr_the_perfectionist/"
+        },
+        {
+          "plat": "Facebook",
+          "Link": " https://www.facebook.com/profile.php?id=100010295624018/"
+        },
+        {
+          "plat": "Youtube",
+          "Link": "https://m.youtube.com/channel/UCE8DycFro7hgCwqTQJKamJA"
         }
-    ]
+      ]
+    },
+    {
+      "name": "Gaurav Chale",
+      "position": "Co-Founder",
+      "Socials": [
+        {
+          "plat": "LinkedIn",
+          "Link": "https://www.linkedin.com/in/gaurav-chale-80b935133/"
+        },
+        {
+          "plat": "Instagram",
+          "Link": "https://instagram.com/__gauravchale__?igshid=gv874gl0u0ge/"
+        },
+        {
+          "plat": "Facebook",
+          "Link": "https://www.facebook.com/gaurav.chale.7/"
+        }
+      ]
+    },
+    {
+      "name": "Ranu Agrawal",
+      "position": "Social Media Manager & Content Creator",
+      "Socials": [
+        {
+          "plat": "LinkedIn",
+          "Link": "https://www.linkedin.com/in/ranu-agrawal-82a2b319b"
+        },
+        {
+          "plat": "Twitter",
+          "Link": "https://twitter.com/ag_ranuuuu?s=09"
+        },
+        {
+          "plat": "Instagram",
+          "Link": "https://instagram.com/ag_ranu?utm_medium=copy_link"
+        }
+      ]
+    }
+  ]
 }

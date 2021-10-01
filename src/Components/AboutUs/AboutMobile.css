@@ -1,7 +1,7 @@
 .about-mobile {
     min-height: 100vh;
     background-color: var(--secondary-color);
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     row-gap: 30px;
     align-items: center;
@@ -35,4 +35,8 @@
 }
 .about-team{
     padding-bottom: 20px;
+}
+
+.about-desktop{
+    display: none;
 }

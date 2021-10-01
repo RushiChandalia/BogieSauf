@@ -3,7 +3,7 @@
   --secondary-color: white;
   --accent-color: #F1534D;
   --side-padding: 50px;
-  --top-bottom-padding: 5px;
+  --top-bottom-padding: 10px;
 }
 html{
   scroll-behavior: smooth;
@@ -16,6 +16,7 @@ body{
   padding: 0;
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
 
 .App{
