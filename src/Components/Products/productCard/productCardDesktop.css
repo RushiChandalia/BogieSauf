@@ -1,0 +1,16 @@
+@media screen and (min-width:992px){
+    .productCard-wrapper {
+        height: fit-content !important;
+        width: auto;
+    }
+    .productCard{
+        height: inherit;
+        padding: 20px 40px;
+    }
+    .productCard p{
+        font-size:18px;
+      }
+      .productCard img {
+        height: 100px;
+      }
+}

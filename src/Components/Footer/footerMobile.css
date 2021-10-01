@@ -1,0 +1,41 @@
+.Footer{
+    background-color: var(--secondary-color);
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 10px;
+}
+.Footer .logo{
+    display: flex;
+    align-items: center;
+    font-size:20px;
+    font-weight: bold;
+    text-transform:uppercase;
+}
+.Footer .logo img{
+    height: 100px;
+}
+.Footer .footer-slogan{
+    display: none;
+}
+.Footer .footer-slogan p:nth-child(1){
+    font-size:20px;
+    font-weight: 500;
+}
+.Footer .footer-slogan p:nth-child(2){
+    font-size:12px;font-style: italic;
+}
+.Footer .footer-info{
+    display: flex;
+    justify-content: space-between;
+    font-size:12px;
+}
+.Footer .footer-info h4{
+    font-size:15px;
+    margin-bottom:5px
+}
+.Footer .footer-follow img{
+    height: 25px;
+    margin-right: 10px;
+    margin-top: 10px;
+}

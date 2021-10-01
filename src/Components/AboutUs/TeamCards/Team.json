@@ -1,0 +1,82 @@
+{
+    "Team":[
+        {
+            "name": "Mayur Mahla",
+            "position": "Co-Founder & CEO",
+            "Socials":[
+                {
+                    "plat":"LinkedIn",
+                    "Link":""
+                },
+                {
+                    "plat":"Twitter",
+                    "Link":""
+                },
+                {
+                    "plat":"Instagram",
+                    "Link":""
+                },
+                {
+                    "plat":"Facebook",
+                    "Link":""
+                },
+                {
+                    "plat":"Youtube",
+                    "Link":""
+                }
+            ]
+        },
+        {
+            "name": "Gaurav Chale",
+            "position": "Co-Founder",
+            "Socials":[
+                {
+                    "plat":"LinkedIn",
+                    "Link":""
+                },
+                {
+                    "plat":"Twitter",
+                    "Link":""
+                },
+                {
+                    "plat":"Instagram",
+                    "Link":""
+                },
+                {
+                    "plat":"Facebook",
+                    "Link":""
+                },
+                {
+                    "plat":"Youtube",
+                    "Link":""
+                }
+            ]
+        },
+        {
+            "name": "Ranu Agrawal",
+            "position": "Social Media Manager & Content Creator",
+            "Socials":[
+                {
+                    "plat":"LinkedIn",
+                    "Link":""
+                },
+                {
+                    "plat":"Twitter",
+                    "Link":""
+                },
+                {
+                    "plat":"Instagram",
+                    "Link":""
+                },
+                {
+                    "plat":"Facebook",
+                    "Link":""
+                },
+                {
+                    "plat":"Youtube",
+                    "Link":""
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+@media screen and (min-width: 992px) {
+  .hamBurger {
+    display: none !important;
+  }
+  .navbar {
+    opacity: 1;
+    z-index: 1;
+    font-size: 15px !important;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr !important;
+    box-sizing: border-box;
+  }
+  .navbar .logo {
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 25px !important;
+    column-gap: 15px;
+    font-weight: 900;
+    text-transform: uppercase;
+    width: fit-content;
+    justify-content: flex-start;
+    align-items: center;
+    /* background-color: red; */
+  }
+  .navbar .navList {
+    display: flex !important;
+    /* background-color:cyan; */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: normal;
+  }
+  .navbar .navList a {
+    text-decoration: none;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    padding: 10px 0px;
+  }
+  .navbar .navList a:hover {
+    transform: translateY(-4px);
+    transition: transform 0.5s ease;
+  }
+}

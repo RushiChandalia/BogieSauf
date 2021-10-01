@@ -1,0 +1,12 @@
+{
+  "products": [
+    { "name": "Four Wheel", "code": "Car" },
+    { "name": "Three Wheel", "code": "Rickshaw" },
+    {
+      "name": "Two Wheel",
+      "code": "Bike"
+    },
+    { "name": "Multi Wheel", "code": "Truck"},
+    { "name": "Six - Eight Wheel", "code": "Bus"}
+  ]
+}

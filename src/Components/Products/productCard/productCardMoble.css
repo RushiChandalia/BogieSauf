@@ -1,0 +1,25 @@
+.productCard-wrapper {
+  width: 140px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    118deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 29%,
+    rgba(241, 83, 77, 1) 100%
+  );
+  padding: 3px;
+  border-radius:15px
+}
+.productCard{
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  border-radius:15px;
+  text-transform: uppercase;
+
+}
+.productCard p{
+  font-size:14px;
+}
+.productCard img {
+  height: 70px;
+}

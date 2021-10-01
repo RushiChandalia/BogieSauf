@@ -1,0 +1,38 @@
+.about-mobile {
+    min-height: 100vh;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+}
+
+.about-mobile p {
+    text-align: justify;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+
+.about-mobile h1 {
+    text-align: center;
+}
+
+.about-mobile .about-team .card-content {
+    color: var(--secondary-color);
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.about-team h1 {
+    margin-bottom: 20px;
+}
+.about-team{
+    padding-bottom: 20px;
+}

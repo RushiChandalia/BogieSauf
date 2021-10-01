@@ -1,0 +1,15 @@
+@media screen and (min-width:992px){
+    .contact{
+        box-sizing: border-box;
+        background-color: var(--primary-color);
+        padding: var(--top-bottom-padding)  var(--side-padding) !important;
+        display: flex;
+        flex-direction: row-reverse !important;
+        justify-content: space-around !important;
+        /* text-align: left; */
+        height: 100vh !important;
+    }
+    .contact h1{
+        font-size:50px
+    }
+}

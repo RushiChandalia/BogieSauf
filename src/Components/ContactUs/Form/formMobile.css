@@ -1,0 +1,73 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    width: 100%;
+    padding: 10px 25px;
+    box-sizing: border-box;
+}
+.form .normal-inp{
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 20px;
+    column-gap: 10px;
+    width: 100%;
+}
+.form .normal-inp input{
+    background-color:transparent !important;
+    border: 2px solid rgba(255, 255, 255, 0.514);
+    padding: 15px;
+    border-radius:5px;
+    color: white !important;
+}
+input::placeholder{
+    color: rgba(255, 255, 255, 0.548);
+}
+textarea::placeholder{
+    color: rgba(255, 255, 255, 0.548);
+}
+textarea{
+    width: 100%;
+    background-color:transparent !important;
+    border: 2px solid rgba(255, 255, 255, 0.514);
+    padding: 15px;
+    border-radius:5px;
+    box-sizing: border-box;
+    color: white !important;
+
+}
+.form-radio{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
+    row-gap: 10px;
+}
+.form-radio span{
+    display:flex;
+    column-gap:10px;
+    align-items: center;
+    font-size: 12px;
+}
+
+.form-btn{
+    padding: 10px 35px;
+    border: 1px solid var(--accent-color);
+    background-color: transparent;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    display: flex;
+    align-self: center;
+    width: max-content;
+}
+
+.form-btn:hover{
+    background-color:var(--accent-color);
+    transition: 0.3s ease;
+}
+.loader{
+    padding: 0;
+}

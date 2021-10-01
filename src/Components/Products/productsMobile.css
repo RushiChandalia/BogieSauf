@@ -1,0 +1,27 @@
+.products{
+    height: 100vh;
+    color: var(--secondary-color);
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+    margin-top: 10%;
+    text-transform: uppercase;
+}
+.products span p{
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 200;
+    font-style:italic;
+    text-transform: capitalize;
+}
+.product-cards{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    row-gap: 20px;
+    column-gap: 20px;
+}

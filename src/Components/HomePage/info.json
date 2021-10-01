@@ -1,0 +1,20 @@
+{
+  "information-home": [
+    {
+        "name":"Car",
+        "image":"../../Images/sedan.png",
+        "line":"Let your car move on a path without any dither!"
+    },
+    {
+        "name":"Bike",
+        "image":"../../Images/sedan.png",
+        "line":"No matter of tire pressure being check !"
+    },
+    {
+        "name":"Multi wheel vehicle",
+        "image":"../../Images/sedan.png",
+        "line":"Tire burst ? No problem, we're here to solve it !"
+    }
+
+  ]
+}

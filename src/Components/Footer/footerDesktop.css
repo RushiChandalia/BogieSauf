@@ -1,0 +1,42 @@
+@media screen and (min-width:992px) {
+    .Footer {
+        display: grid;
+        grid-template-columns: auto auto auto !important;
+    }
+    .Footer .logo {
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+        font-weight: bold;
+        text-transform: uppercase;
+        width: fit-content;
+    }
+    .Footer .footer-slogan {
+        display: block;
+        justify-content: center;
+        align-self: center;
+    }
+    .Footer .footer-slogan p:nth-child(1) {
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .Footer .footer-slogan p:nth-child(2) {
+        font-size: 14px;
+        font-style: italic;
+    }
+    .Footer .footer-info{
+        display: flex;
+        justify-content: space-around;
+        align-self: center;
+        font-size:14px;
+    }
+    .Footer .footer-info h4{
+        font-size:18px;
+        margin-bottom:5px
+    }
+    .Footer .footer-follow img{
+        height: 25px;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+}

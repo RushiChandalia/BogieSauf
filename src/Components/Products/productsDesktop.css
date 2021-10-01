@@ -1,0 +1,32 @@
+@media screen and (min-width:992px){
+    .products{
+        height: 100vh;
+        margin: 0;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        justify-content: space-between;
+        align-items: center !important;
+    }
+    .product-content{
+        text-align:left;
+    }
+    .product-content h1{
+        font-size:50px !important;
+        text-align: left;
+        width: 100%;
+    }
+    .product-content p{
+        font-size:18px !important;
+    }
+    .product-cards{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        align-items: center;
+        row-gap: 40px;
+        column-gap: 30px;
+        height: auto;
+    }
+
+}
+

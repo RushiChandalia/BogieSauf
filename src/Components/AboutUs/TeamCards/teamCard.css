@@ -1,0 +1,44 @@
+
+.card-wrapper{
+    height:300px;
+    background-image: url(../../../Images/pexels-anni-roenkae-3109807.jpg);
+    background-size: cover;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius:20px 20px 20px 20px;
+
+}
+.card-content{
+    height: 100%;
+    width: 100%;
+    border-radius:20px 20px 20px 20px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    row-gap: 10px;
+    align-items: center;
+    background-color: var(--primary-color);
+    box-sizing: border-box;
+    padding: 20px 10px;
+}
+.card-content p{
+    margin: 0 !important;
+    font-size: 12px;
+}
+.card-wrapper img{
+    height:100px;
+    width: 100px;
+    transform: translateY(40%);
+    border-radius:50%;
+}
+
+.social-media img{
+    height: 20px;
+    width: auto;
+}
+.social-media {
+   display: flex;
+   justify-content:center;
+   align-items:center;column-gap: 10px;
+}
