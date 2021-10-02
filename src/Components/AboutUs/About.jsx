@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import TeamCard from "./TeamCards/TeamCard";
-import "./aboutMobile.css";
+import "./aboutMobile1.css";
 import "./aboutDesktop.css";
 import TeamJson from "./TeamCards/Team.json";
 const About = () => {
