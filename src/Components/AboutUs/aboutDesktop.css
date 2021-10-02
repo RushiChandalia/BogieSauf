@@ -7,6 +7,7 @@
         flex-direction: column !important;
         height: 100vh;
         background-color: var(--secondary-color);
+        color: var(--primary-color);
     }
     .about-tabs {
         height: 20%;
@@ -27,7 +28,7 @@
         text-transform: uppercase;
         font-size: 20px;
         font-weight: bolder;
-        color: black;
+        color: var(--primary-color);
     }
     .tab-content-about {
         width: 70%;
@@ -53,5 +54,27 @@
         transition: background-color 0.5s ease;
         color: var(--secondary-color);
 
+    }
+    .cards-desktop{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height:100%;
+        text-transform: uppercase;
+    }
+    .cards-desktop .cards{
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between !important;
+        transition:display 1s ease;
+        height: fit-content;
+       
+    }
+    .cards-desktop .cards .card-wrapper{
+        height: 370px;
+        width: 270px;
     }
 }

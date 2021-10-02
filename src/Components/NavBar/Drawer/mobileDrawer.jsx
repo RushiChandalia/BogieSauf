@@ -31,7 +31,7 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {["Home","About Us", "Products", "Achievements", "Contact Us"].map(
+        {["Home","About Us", "Products", "Contact Us"].map(
           (text, index) => (
             <>
               <a id="ham-link" href={`/#${text}`}>

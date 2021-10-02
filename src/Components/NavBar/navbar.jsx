@@ -44,7 +44,6 @@ const Navbar = () => {
           <a href="/#Home">Home</a>
           <a href="/#Products">Products</a>
           <a href="/#About Us">About Us</a>
-          <a href="/">Achievements</a>
           <a href="/#Contact Us">Contact Us</a>
         </div>
         <Drawer />

@@ -2,6 +2,7 @@
     .Footer {
         display: grid;
         grid-template-columns: auto auto auto !important;
+        justify-content: baseline !important;
     }
     .Footer .logo {
         display: flex;
@@ -15,6 +16,7 @@
         display: block;
         justify-content: center;
         align-self: center;
+        color: var(--primary-color);
     }
     .Footer .footer-slogan p:nth-child(1) {
         font-size: 24px;
@@ -29,10 +31,18 @@
         justify-content: space-around;
         align-self: center;
         font-size:14px;
+        color: var(--primary-color);
     }
     .Footer .footer-info h4{
-        font-size:18px;
-        margin-bottom:5px
+        font-size:20px;
+        margin-bottom:5px;
+        color: var(--primary-color);
+    }
+    .Footer .footer-info p{
+        font-weight: 300;
+        font-style: italic;
+        font-size:14px;
+    
     }
     .Footer .footer-follow img{
         height: 25px;

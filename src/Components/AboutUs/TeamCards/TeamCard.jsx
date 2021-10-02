@@ -8,7 +8,7 @@ import Instagram from "../../../Images/instagram.png";
 import Twitter from "../../../Images/twitter.png";
 import Facebook from "../../../Images/facebook.png";
 import Youtube from "../../../Images/youtube.png";
-
+import "./teamCardDesktop.css";
 const TeamCard = ({ info }) => {
   switch (info.name) {
     case "Mayur Mahla":
@@ -29,7 +29,7 @@ export default TeamCard;
 
 const Card = ({ image, info }) => (
   <div className="card-wrapper">
-      <img src={image} alt="" />
+    <img src={image} alt="" />
     <div className="card-content">
       <h2>{info.name}</h2>
       <p>{info.position}</p>

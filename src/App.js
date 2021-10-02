@@ -7,6 +7,7 @@ import Footer from "./Components/Footer/Footer.jsx"
 import { Divider } from "@mui/material";
 import About from "./Components/AboutUs/About"
 
+
 function App() {
   return <div className="App">
     <Navbar/>

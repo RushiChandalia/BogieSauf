@@ -30,9 +30,10 @@
     display: flex !important;
     /* background-color:cyan; */
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    font-weight: normal;
+    column-gap: 70px;
+    font-weight: 500;
   }
   .navbar .navList a {
     text-decoration: none;
