@@ -9,16 +9,16 @@ import Twitter from "../../../Images/twitter.png";
 import Facebook from "../../../Images/facebook.png";
 import Youtube from "../../../Images/youtube.png";
 import "./teamCardDesktop.css";
-const TeamCard = ({ info }) => {
+const TeamCard = ({ info, index }) => {
   switch (info.name) {
     case "Mayur Mahla":
-      return <Card image={Mayur} info={info} />;
+      return <Card image={Mayur}key={index} index = {index} info={info} />;
 
     case "Gaurav Chale":
-      return <Card image={Gaurav} info={info} />;
+      return <Card image={Gaurav} index = {index} info={info} />;
 
     case "Ranu Agrawal":
-      return <Card image={Ranu} info={info} />;
+      return <Card image={Ranu} index = {index} info={info} />;
 
     default:
       break;
@@ -27,8 +27,8 @@ const TeamCard = ({ info }) => {
 
 export default TeamCard;
 
-const Card = ({ image, info }) => (
-  <div className="card-wrapper">
+const Card = ({ image, info,index }) => (
+  <div data-aos={index % 2 === 0 ? "flip-right" : "flip-left"} data-aos-duration="500"  className="card-wrapper">
     <img src={image} alt="" />
     <div className="card-content">
       <h2>{info.name}</h2>
@@ -38,27 +38,27 @@ const Card = ({ image, info }) => (
           switch (soc.plat) {
             case "LinkedIn":
               return (
-                <SocialLinks key={index} image={LinkedIn} link={soc.Link} />
+                <SocialLinks index={index} key={index} image={LinkedIn} link={soc.Link} />
               );
 
             case "Twitter":
               return (
-                <SocialLinks index={index} image={Twitter} link={soc.Link} />
+                <SocialLinks index={index} key={index} image={Twitter} link={soc.Link} />
               );
 
             case "Instagram":
               return (
-                <SocialLinks index={index} image={Instagram} link={soc.Link} />
+                <SocialLinks index={index} key={index} image={Instagram} link={soc.Link} />
               );
 
             case "Facebook":
               return (
-                <SocialLinks index={index} image={Facebook} link={soc.Link} />
+                <SocialLinks index={index} key={index} image={Facebook} link={soc.Link} />
               );
 
             case "Youtube":
               return (
-                <SocialLinks index={index} image={Youtube} link={soc.Link} />
+                <SocialLinks index={index} key={index} image={Youtube} link={soc.Link} />
               );
 
             default:
@@ -71,8 +71,8 @@ const Card = ({ image, info }) => (
   </div>
 );
 
-const SocialLinks = ({ image, link }) => (
-  <span>
+const SocialLinks = ({index, image, link }) => (
+  <span key={index}>
     <a href={link}>
       <img src={image} alt="" />
     </a>

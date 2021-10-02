@@ -33,14 +33,14 @@ export default function TemporaryDrawer() {
       <List>
         {["Home","About Us", "Products", "Contact Us"].map(
           (text, index) => (
-            <>
-              <a id="ham-link" href={`/#${text}`}>
+            <div key={index}>
+              <a key={index} id="ham-link" href={`/#${text}`}>
                 <ListItem button key={text}>
                   <ListItemText primary={text} />
                 </ListItem>
               </a>
               <Divider />
-            </>
+            </div>
           )
         )}
       </List>

@@ -7,6 +7,8 @@ import Footer from "./Components/Footer/Footer.jsx";
 import { Divider } from "@mui/material";
 import About from "./Components/AboutUs/About";
 import { useEffect, useState } from "react";
+import Gear from "./Images/animation_500_ku9j2ktm.gif"
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -27,7 +29,9 @@ function App() {
   return (
     <div className="App">
       {loading ? (
-        <h1>Loading</h1>
+        <div className="App-loader">
+          <img src={Gear} alt=""/>
+        </div>
       ) : (
         <>
           <Navbar />

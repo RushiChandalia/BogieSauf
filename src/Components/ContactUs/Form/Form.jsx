@@ -4,7 +4,7 @@ import "./formDesktop.css";
 import emailjs from "emailjs-com";
 import CircularProgress from "@mui/material/CircularProgress";
 import * as dotenv from "dotenv";
-
+import { toast, ToastContainer } from "react-toastify";
 dotenv.config();
 const Form = () => {
   const userID = emailjs.init(process.env.REACT_APP_USER_ID);
@@ -15,26 +15,63 @@ const Form = () => {
     from_name: " ",
     from_email: "",
     from_address: "",
-    from_number: "",
+    from_number: 0,
     req_for: [],
     from_message: "",
   });
   const [loading, setLoading] = useState(false);
   const handleSubmit = async () => {
     setLoading(true);
-    console.log(templateParams);
-    const response = await emailjs.send(
-      serviceID,
-      templateID,
-      templateParams,
-      userID
-    );
-    if (response) setLoading(false);
-    else console.log("failed");
+    var response;
+    if (
+      templateParams.from_name === "" ||
+      templateParams.from_email === "" ||
+      templateParams.from_number  === 0
+    ) {
+      
+      toast.error("Please fill the required fields in the form!",{autoClose: 3000});
+      setLoading(false);
+
+    } else if (templateParams.req_for.length === 0) {
+      toast.error("Please select any one of the check boxes!",{autoClose: 3000});
+      setLoading(false);
+
+    } else {
+      response = await emailjs.send(
+        serviceID,
+        templateID,
+        templateParams,
+        userID
+      );
+      if (response) {
+        toast.success("Thank You, Request sent successfully!", {
+          position: "bottom-left",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        setLoading(false);
+      } else
+        toast.error("Oops, Something went wrong!", {
+          position: "bottom-left",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        setLoading(false);
+
+    }
+
+    
   };
 
   const handleChange = (e) => {
-    console.log(e.target.name);
     switch (e.target.name) {
       case "Name":
         settemplateParams({
@@ -51,7 +88,7 @@ const Form = () => {
       case "Number":
         settemplateParams({
           ...templateParams,
-          from_number: e.target.value,
+          from_number: parseInt(e.target.value),
         });
         break;
       case "Address":
@@ -73,7 +110,7 @@ const Form = () => {
   };
 
   const onCheckboxChange = (e) => {
-      var index
+    var index;
     switch (e.target.value) {
       case "Car":
         if (e.target.checked) {
@@ -134,13 +171,23 @@ const Form = () => {
   };
 
   return (
-    <div className="form">
+    <div data-aos="fade-up" className="form">
+      <ToastContainer
+        className="toastContainer"
+        position="bottom-left"
+        autoClose={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+      />
       <div className="normal-inp">
         <input
           type="text"
           name="Name"
           id="form-name"
-          placeholder="Name"
+          placeholder="Name * "
           onChange={(e) => {
             handleChange(e);
           }}
@@ -149,7 +196,7 @@ const Form = () => {
           type="email"
           name="Email"
           id="form-email"
-          placeholder="Email"
+          placeholder="Email * "
           onChange={(e) => {
             handleChange(e);
           }}
@@ -158,7 +205,7 @@ const Form = () => {
           type="number"
           name="Number"
           id="form-number"
-          placeholder="Number"
+          placeholder="Number * "
           onChange={(e) => {
             handleChange(e);
           }}
@@ -194,7 +241,7 @@ const Form = () => {
               onCheckboxChange(e);
             }}
           />
-          <label for="html">Car</label>
+          <label >Car</label>
           <br />
         </span>
         <span>
@@ -207,7 +254,7 @@ const Form = () => {
               onCheckboxChange(e);
             }}
           />
-          <label for="Bike">Bike</label>
+          <label>Bike</label>
           <br />
         </span>
         <span>
@@ -220,7 +267,7 @@ const Form = () => {
               onCheckboxChange(e);
             }}
           />
-          <label for="html">Auto Rickshaw</label>
+          <label >Auto Rickshaw</label>
           <br />
         </span>
         <span>
@@ -233,7 +280,7 @@ const Form = () => {
               onCheckboxChange(e);
             }}
           />
-          <label for="html">Truck</label>
+          <label>Truck</label>
           <br />
         </span>
       </div>

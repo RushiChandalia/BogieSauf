@@ -9,8 +9,12 @@ const About = () => {
     <div id="About Us" className="about">
       <div className="container about-mobile">
         <span>
-          <h1>About Us</h1>
-          <p>
+          <h1 data-aos="fade-up">About Us</h1>
+          <p
+            data-aos="fade-up"
+            data-aos-anchor=".about-mobile span h1"
+            data-aos-delay="200"
+          >
             A tire pressure maintenance setup which not only keeps content check
             on the pressure, but also fills or reduces air in the wheels as and
             when necessary. This has prevent several other issues like tire
@@ -24,8 +28,8 @@ const About = () => {
           </p>
         </span>
         <span>
-          <h1>Mission</h1>
-          <p>
+          <h1 data-aos="fade-up">Mission</h1>
+          <p data-aos="fade-up" data-aos-delay="200">
             The initiatives have been found to meet the tire-related problems
             and resolve them by installing a fully automated tire pressure
             maintenance system, which ensures to keep the journey safe and
@@ -61,7 +65,7 @@ const About = () => {
         {tab === "About" ? (
           <div className="tab-content-about">
             <>
-              <span>
+              <span data-aos="fade-up">
                 <h4>About Us</h4>
                 <p>
                   A tire pressure maintenance setup which not only keeps content
@@ -77,7 +81,7 @@ const About = () => {
                   ensure safe passage in spite of vehicul puncture.
                 </p>
               </span>
-              <span>
+              <span data-aos="fade-up" data-aos-delay="100">
                 <h4>Mission</h4>
                 <p>
                   {" "}
@@ -113,10 +117,10 @@ export default About;
 const CardGridMobile = () => {
   return (
     <div className="about-team">
-      <h1>meet the team</h1>
+      <h1 data-aos="fade-up">meet the team</h1>
       <div className="cards">
         {TeamJson.Team.map((mem, index) => (
-          <TeamCard key={index} info={mem} />
+          <TeamCard  index={index} key={index} info={mem} />
         ))}
       </div>
     </div>

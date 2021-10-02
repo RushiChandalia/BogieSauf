@@ -7,7 +7,7 @@ import Bike from "../../Images/motorbike.png";
 import Multi from "../../Images/Multi wheel vehicle.png";
 const HomePage = () => {
   return (
-    <div id="Home" class="container home-page">
+    <div id="Home" className="container home-page">
       <div className="banner-front">
         <div className="banner-content">
           <h1>TIRE PRESSURE MAINTENANCE SERVICES</h1>
@@ -15,7 +15,7 @@ const HomePage = () => {
             Tired with checking tire pressure? Let us do both pressure
             monitoring and maintenance at the same time!!!
           </p>
-          <div className="banner-button">
+          <div onClick = {()=>window.location.href = "/#Contact Us"} className="banner-button">
             Try Now <span id="arrow">&#8594;</span>{" "}
           </div>
         </div>

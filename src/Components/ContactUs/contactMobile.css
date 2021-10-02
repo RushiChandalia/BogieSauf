@@ -8,4 +8,5 @@
     color: var(--secondary-color);
     text-transform: uppercase;
     row-gap: 20px;
+    text-align: center;
 }
