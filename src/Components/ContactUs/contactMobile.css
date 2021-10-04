@@ -9,4 +9,18 @@
     text-transform: uppercase;
     row-gap: 20px;
     text-align: center;
+    padding-top: 50px;
+}
+.contact span{
+    display: flex;
+    flex-direction: column;
+    row-gap:10px
+}
+.contact p{
+    font-weight: 200;
+    font-size: 14px;
+    font-style: italic;
+    text-transform: capitalize;
+    width: 100%;
+    text-align: center;
 }

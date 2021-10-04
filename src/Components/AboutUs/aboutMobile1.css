@@ -8,6 +8,7 @@
     text-transform: uppercase;
     justify-content: space-evenly;
     box-sizing: border-box;
+    padding-top: 50px !important;
 }
 
 .about-mobile p {
