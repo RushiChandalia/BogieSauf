@@ -25,6 +25,27 @@
           "Link": "https://m.youtube.com/channel/UCE8DycFro7hgCwqTQJKamJA"
         }
       ]
+    },{
+      "name": "Ranu Agrawal",
+      "position": "Social Media Manager & Content Creator",
+      "Socials": [
+        {
+          "plat": "LinkedIn",
+          "Link": "https://www.linkedin.com/in/ranu-agrawal-82a2b319b"
+        },
+        {
+          "plat": "Twitter",
+          "Link": "https://twitter.com/ag_ranuuuu?s=09"
+        },
+        {
+          "plat": "Instagram",
+          "Link": "https://instagram.com/ag_ranu?utm_medium=copy_link"
+        },
+        {
+          "plat": "Blogspot",
+          "Link": "https://ranuagrawal0610.blogspot.com/"
+        }
+      ]
     },
     {
       "name": "Gaurav Chale",
@@ -43,24 +64,7 @@
           "Link": "https://www.facebook.com/gaurav.chale.7/"
         }
       ]
-    },
-    {
-      "name": "Ranu Agrawal",
-      "position": "Social Media Manager & Content Creator",
-      "Socials": [
-        {
-          "plat": "LinkedIn",
-          "Link": "https://www.linkedin.com/in/ranu-agrawal-82a2b319b"
-        },
-        {
-          "plat": "Twitter",
-          "Link": "https://twitter.com/ag_ranuuuu?s=09"
-        },
-        {
-          "plat": "Instagram",
-          "Link": "https://instagram.com/ag_ranu?utm_medium=copy_link"
-        }
-      ]
     }
+    
   ]
 }

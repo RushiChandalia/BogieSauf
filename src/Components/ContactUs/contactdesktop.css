@@ -16,6 +16,8 @@
     .contact p{
         font-weight: 200;
         font-style: italic;
-        text-transform: capitalize
+        text-transform: capitalize;
+        width: 90%;
+        text-align: justify;
     }
 }

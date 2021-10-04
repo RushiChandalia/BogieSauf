@@ -12,8 +12,8 @@ const Footer = () => {
                 <p>Bogie Sauf</p>
             </div>
             <div className="footer-slogan">
-                <p>CREATING VALUES FOR YOU!</p>
-                <p>Your problem are our problems, let's try to solve it together.</p>
+                <p>B E U N S T O P P A B L E</p>
+                <p> We care for you. We work for you.</p>
             </div>
             <div className="footer-info">
                 <div className="footer-products">

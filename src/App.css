@@ -15,7 +15,10 @@ body{
 *{
   padding: 0;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Sora';
+  /* font-family: 'Epilogue'; */
   box-sizing: border-box;
 }
 

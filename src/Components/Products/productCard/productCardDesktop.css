@@ -4,7 +4,8 @@
         width: auto;
     }
     .productCard{
-        height: inherit;
+        height: 200px;
+        width: 200px;
         padding: 20px 40px;
     }
     .productCard p{

@@ -8,6 +8,7 @@ import Instagram from "../../../Images/instagram.png";
 import Twitter from "../../../Images/twitter.png";
 import Facebook from "../../../Images/facebook.png";
 import Youtube from "../../../Images/youtube.png";
+import Blogspot from "../../../Images/blogging.png";
 import "./teamCardDesktop.css";
 const TeamCard = ({ info, index }) => {
   switch (info.name) {
@@ -60,6 +61,10 @@ const Card = ({ image, info,index }) => (
               return (
                 <SocialLinks index={index} key={index} image={Youtube} link={soc.Link} />
               );
+            case "Blogspot":
+              return (
+                <SocialLinks index={index} key={index} image={Blogspot} link={soc.Link} />
+              );
 
             default:
               break;
@@ -73,7 +78,7 @@ const Card = ({ image, info,index }) => (
 
 const SocialLinks = ({index, image, link }) => (
   <span key={index}>
-    <a href={link}>
+    <a target="_blank" rel="noreferrer" href={link}>
       <img src={image} alt="" />
     </a>
   </span>

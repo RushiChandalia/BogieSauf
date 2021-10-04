@@ -10,15 +10,19 @@ const Products = () => {
         <h1 data-aos="fade-up" data-aos-anchor=".products">
           Which product do you need?
         </h1>
-        <p data-aos="fade-up" data-aos-anchor=".products" data-aos-delay="200"> 
-          Whichever vehicle you have, tire-related problems? Check out products
-          related to your vehicle below
+        <p data-aos="fade-up" data-aos-anchor=".products" data-aos-delay="200">
+          Your Suitable Products: We have what you required.
         </p>
       </span>
       <div className="product-cards">
         {ProductsJSON.products.map((product, index) => {
           return (
-            <ProductCard key={index} name={product.name} code={product.code} index={index} />
+            <ProductCard
+              key={index}
+              name={product.name}
+              code={product.code}
+              index={index}
+            />
           );
         })}
       </div>

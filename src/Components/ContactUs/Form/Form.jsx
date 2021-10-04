@@ -7,7 +7,6 @@ import * as dotenv from "dotenv";
 import { toast, ToastContainer } from "react-toastify";
 dotenv.config();
 const Form = () => {
-  const userID = emailjs.init(process.env.REACT_APP_USER_ID);
   const serviceID = process.env.REACT_APP_SERVICE_ID;
   const templateID = process.env.REACT_APP_TEMPLATE_ID;
 
@@ -26,33 +25,38 @@ const Form = () => {
     if (
       templateParams.from_name === "" ||
       templateParams.from_email === "" ||
-      templateParams.from_number  === 0
+      templateParams.from_number === 0
     ) {
-      
-      toast.error("Please fill the required fields in the form!",{autoClose: 3000});
+      toast.error("Please fill the required fields in the form!", {
+        autoClose: 3000,
+      });
       setLoading(false);
-
     } else if (templateParams.req_for.length === 0) {
-      toast.error("Please select any one of the check boxes!",{autoClose: 3000});
+      toast.error("Please select any one of the check boxes!", {
+        autoClose: 3000,
+      });
       setLoading(false);
-
     } else {
+      console.log(process.env.REACT_APP_USER_ID,serviceID,templateID);
       response = await emailjs.send(
         serviceID,
         templateID,
         templateParams,
-        userID
+        process.env.REACT_APP_USER_ID
       );
       if (response) {
-        toast.success("Thank You, Request sent successfully!", {
-          position: "bottom-left",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        toast.success(
+          "Thank you for reaching to us. Your message is being reviewed. Our team will contact you soon.",
+          {
+            position: "bottom-left",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          }
+        );
         setLoading(false);
       } else
         toast.error("Oops, Something went wrong!", {
@@ -64,11 +68,8 @@ const Form = () => {
           draggable: true,
           progress: undefined,
         });
-        setLoading(false);
-
+      setLoading(false);
     }
-
-    
   };
 
   const handleChange = (e) => {
@@ -241,7 +242,7 @@ const Form = () => {
               onCheckboxChange(e);
             }}
           />
-          <label >Car</label>
+          <label>Car</label>
           <br />
         </span>
         <span>
@@ -267,7 +268,7 @@ const Form = () => {
               onCheckboxChange(e);
             }}
           />
-          <label >Auto Rickshaw</label>
+          <label>Auto Rickshaw</label>
           <br />
         </span>
         <span>

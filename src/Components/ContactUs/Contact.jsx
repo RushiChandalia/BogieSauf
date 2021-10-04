@@ -9,7 +9,7 @@ const Contact = () => {
       <span>
         {" "}
         <h1>Contact Us </h1>
-        <p>Drop us your request and we will get back to you!</p>
+        <p>Reach us. - Hurry up, we are waiting for you. Include all product segments below.</p>
       </span>
       <Form />
       

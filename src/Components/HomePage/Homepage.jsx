@@ -3,7 +3,7 @@ import "./homepageDesktop.css";
 import "./homepageMobile.css";
 import INFO from "./info.json"
 import Car from "../../Images/Car.png";
-import Bike from "../../Images/motorbike.png";
+import Bike from "../../Images/bus.png";
 import Multi from "../../Images/Multi wheel vehicle.png";
 const HomePage = () => {
   return (
@@ -25,7 +25,7 @@ const HomePage = () => {
         {
             INFO["information-home"].map((info, i)=>(
                 <div key={i} className="info-card">
-                    {info.name === "Car" ? <img height="80px" src={Car} alt=""/> : info.name === "Bike" ? <img height="80px" src={Bike} alt=""/> :<img height="80px" src={Multi} alt=""/> }
+                    {info.name === "Car" ? <img height="80px" src={Car} alt=""/> : info.name === "Bus/Truck" ? <img height="80px" src={Bike} alt=""/> :<img height="80px" src={Multi} alt=""/> }
                     <div className="info-content">
                         <p>{info.name}</p>
                         <p>{info.line}</p>
