@@ -5,7 +5,7 @@
   }
   .swiper-wrapper {
     width: 100vw ;
-    height: 500px;
+    height:400px;
     z-index: -999 !important;
 
   }
@@ -37,7 +37,7 @@
     row-gap: 10px;
   }
   .slide-content h1 {
-    font-size: 25px !important
+    font-size: 18px !important
   }
   .slide-content img {
     height: 100px;
@@ -46,6 +46,6 @@
     /* padding:5px */
   }
   .slide-content p {
-    font-size: 15px !important;
+    font-size: 12px !important;
     font-weight: 400
   }
