@@ -26,7 +26,6 @@ SwiperCore.use([EffectCoverflow, Autoplay, Pagination]);
 export default function Carousel() {
   return (
     <Swiper
-    data-aos="fade-right"
       effect={"coverflow"}
       grabCursor={true}
       autoplay={{
@@ -48,8 +47,8 @@ export default function Carousel() {
         switch (a.name) {
           case "Pitchbattle":
             return (
-              <SwiperSlide key={i}>
-                <div key={i} className="slide-content">
+              <SwiperSlide>
+                <div className="slide-content">
                   <img src={Pitch} alt="slide" />
                   <span>
                     <h1>{a.name}</h1>
@@ -60,8 +59,8 @@ export default function Carousel() {
             );
           case "Innopreneurs International Startup Contest (6th Edition)":
             return (
-              <SwiperSlide key={i}>
-                <div key={i} className="slide-content">
+              <SwiperSlide>
+                <div className="slide-content">
                   <img src={Lemon} alt="slide" />
                   <span>
                     <h1>{a.name}</h1>
@@ -72,8 +71,8 @@ export default function Carousel() {
             );
           case "Maker Fest Vadodara 2021":
             return (
-              <SwiperSlide key={i}>
-                <div key={i} className="slide-content">
+              <SwiperSlide>
+                <div className="slide-content">
                   <img src={Maker} alt="slide" />
                   <span>
                     <h1>{a.name}</h1>
@@ -84,8 +83,8 @@ export default function Carousel() {
             );
           case "MAGIC's (Marathwada Accelerator for Growth & Incubation Council)":
             return (
-              <SwiperSlide key={i}>
-                <div key={i} className="slide-content">
+              <SwiperSlide>
+                <div className="slide-content">
                   <img src={Maratha} alt="slide" />
                   <span>
                     <h1>{a.name}</h1>
@@ -94,21 +93,15 @@ export default function Carousel() {
                 </div>
               </SwiperSlide>
             );
-          default:
+                   default:
             break;
         }
 
         return null;
       })}
-      <SwiperSlide>
-        <img src={RP} alt="RP" height={200} />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={DNA} alt="RP" height={200} />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={Divya} alt="RP" height={200} />
-      </SwiperSlide>
+    <SwiperSlide><img src={RP} alt="RP" height={200} /></SwiperSlide>
+    <SwiperSlide><img src={DNA} alt="RP" height={200} /></SwiperSlide>
+    <SwiperSlide><img src={Divya} alt="RP" height={200} /></SwiperSlide>
     </Swiper>
   );
 }

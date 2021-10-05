@@ -28,11 +28,11 @@
   }
   .navbar .navList {
     display: flex !important;
+    /* background-color:cyan; */
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     font-weight: 500;
-
   }
   .navbar .navList a {
     text-decoration: none;
