@@ -4,6 +4,9 @@
         grid-template-columns: auto auto auto !important;
         justify-content: baseline !important;
     }
+    .Footer .logo img{
+        height: 50px;
+    }
     .Footer .logo {
         display: flex;
         align-items: center;

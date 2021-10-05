@@ -1,17 +1,26 @@
-.achievements{
-    height:100vh;
-    background-color: var(--secondary-color);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+@media screen and (min-width:992px){
+    .achievements{
+        height:50vh !important;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: var(--secondary-color);
+        display:grid !important;
+        grid-template-columns: 1fr 0.5fr !important;
+        padding-top:0 !important;
+    }
+    
+    
+    .achie-head{
+        width: 100% !important;
+        height: 100%;
+        box-sizing: border-box;
+    
+    }
+    .achie-head h1{
+        font-size:45px !important;
+        text-transform: uppercase;
+        font-weight: bolder;
+    }
 }
 
-.achie-cards{
-    background-color: aqua;
-    width: 100%;
-}
-.achie-head{
-    background-color:red;
-    width: 60%;
 
-}

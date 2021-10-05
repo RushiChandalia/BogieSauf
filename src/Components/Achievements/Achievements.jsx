@@ -1,12 +1,16 @@
-import React from 'react'
-import "./achievmentsDesktop.css"
+import React from "react";
+import "./achievmentsDesktop.css";
+import "./achievementsMobile.css";
+import Carousel from "./Carousel/Carousel";
 const Achievements = () => {
-    return (
-        <div className="container achievements">
-            <h1 className="achie-cards">hello</h1>
-            <h1 className="achie-head">hello</h1>
-        </div>
-    )
-}
+  return (
+    <div id="Achievements" className="container achievements">
+      <Carousel />
+      <div className="achie-head">
+        <h1>Awards <br/> & <br /> Gallery </h1> 
+      </div>
+    </div>
+  );
+};
 
-export default Achievements
+export default Achievements;

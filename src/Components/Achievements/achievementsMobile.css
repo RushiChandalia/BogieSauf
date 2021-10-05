@@ -1,0 +1,25 @@
+.achievements{
+    height:100vh;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    row-gap: 10px;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 50px;
+}
+
+
+.achie-head{
+    /* background-color:red; */
+    width: 100%;
+    height: fit-content;
+
+}
+.achie-head h1{
+    font-size:32px;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+}
