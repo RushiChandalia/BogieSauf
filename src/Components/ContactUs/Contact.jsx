@@ -6,12 +6,13 @@ import Form from "../ContactUs/Form/Form";
 const Contact = () => {
   return (
     <div data-aos="fade-up" id="Contact Us" className="container contact">
+      <Form />
       <span>
         {" "}
-        <h1>Contact Us </h1>
-        <p>Reach us. - Hurry up, we are waiting for you. Include all product segments below.</p>
+        <h1>Reach Us </h1>
+        <p>Hurry up, we are waiting for you.</p>
       </span>
-      <Form />
+      
       
     </div>
   );

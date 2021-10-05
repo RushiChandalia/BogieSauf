@@ -8,10 +8,10 @@ const Products = () => {
     <div id="Products" className="container products">
       <span className="product-content">
         <h1 data-aos="fade-up" data-aos-anchor=".products">
-          Which product do you need?
+          Your Suitable Products
         </h1>
         <p data-aos="fade-up" data-aos-anchor=".products" data-aos-delay="200">
-          Your Suitable Products: We have what you required.
+          We have what you required.
         </p>
       </span>
       <div className="product-cards">

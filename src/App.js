@@ -4,7 +4,7 @@ import Navbar from "./Components/NavBar/navbar";
 import Products from "./Components/Products/Products";
 import Contact from "./Components/ContactUs/Contact";
 import Footer from "./Components/Footer/Footer.jsx";
-import { Divider } from "@mui/material";
+import Achievements from "./Components/Achievements/Achievements";
 import About from "./Components/AboutUs/About";
 import { useEffect, useState } from "react";
 import Gear from "./Images/animation_500_ku9j2ktm.gif"
@@ -36,13 +36,9 @@ function App() {
         <>
           <Navbar />
           <HomePage />
-          <Divider
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            variant="middle"
-          />
-          <Products />
           <About />
+          <Products />
+          <Achievements/>
           <Contact />
           <Footer />
         </>

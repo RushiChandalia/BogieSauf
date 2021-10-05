@@ -30,9 +30,8 @@
     display: flex !important;
     /* background-color:cyan; */
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center;
-    column-gap: 70px;
     font-weight: 500;
   }
   .navbar .navList a {

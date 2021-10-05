@@ -1,0 +1,17 @@
+.achievements{
+    height:100vh;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.achie-cards{
+    background-color: aqua;
+    width: 100%;
+}
+.achie-head{
+    background-color:red;
+    width: 60%;
+
+}

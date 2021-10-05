@@ -39,9 +39,9 @@ textarea{
 }
 .form-radio{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     column-gap: 20px;
-    row-gap: 10px;
+    row-gap: 0px;
 }
 .form-radio span{
     display:flex;

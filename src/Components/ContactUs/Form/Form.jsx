@@ -232,6 +232,19 @@ const Form = () => {
         }}
       />
       <div className="form-radio">
+      <span>
+          <input
+            type="checkbox"
+            id="Bike"
+            name="bogie-products"
+            value="Bike"
+            onChange={(e) => {
+              onCheckboxChange(e);
+            }}
+          />
+          <label>Bike</label>
+          <br />
+        </span>
         <span>
           <input
             type="checkbox"
@@ -245,19 +258,7 @@ const Form = () => {
           <label>Car</label>
           <br />
         </span>
-        <span>
-          <input
-            type="checkbox"
-            id="Bike"
-            name="bogie-products"
-            value="Bike"
-            onChange={(e) => {
-              onCheckboxChange(e);
-            }}
-          />
-          <label>Bike</label>
-          <br />
-        </span>
+       
         <span>
           <input
             type="checkbox"
@@ -282,6 +283,32 @@ const Form = () => {
             }}
           />
           <label>Truck</label>
+          <br />
+        </span>
+        <span>
+          <input
+            type="checkbox"
+            id="Bike"
+            name="bogie-products"
+            value="Bike"
+            onChange={(e) => {
+              onCheckboxChange(e);
+            }}
+          />
+          <label>Multi-Wheel</label>
+          <br />
+        </span>
+        <span>
+          <input
+            type="checkbox"
+            id="Bike"
+            name="bogie-products"
+            value="Bike"
+            onChange={(e) => {
+              onCheckboxChange(e);
+            }}
+          />
+          <label>Multi-purpose</label>
           <br />
         </span>
       </div>
