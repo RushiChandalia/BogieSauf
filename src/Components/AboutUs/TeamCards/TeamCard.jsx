@@ -1,7 +1,7 @@
 import React from "react";
 import "./teamCard.css";
 import Mayur from "./TeamImages/Mayur Mahla.jpg";
-import Gaurav from "./TeamImages/Gaurav Chale.JPG";
+import Gaurav from "./TeamImages/Gaurav Chale.png";
 import Ranu from "./TeamImages/Ranu Agarwal.png";
 import LinkedIn from "../../../Images/linkedin.png";
 import Instagram from "../../../Images/instagram.png";
