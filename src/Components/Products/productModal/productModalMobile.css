@@ -1,0 +1,46 @@
+
+    .MuiBackdrop-root {
+        width: 100%;
+        display: none !important;
+    }
+    .product-modal{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        display: none !important;
+
+    }
+    .modal-content{
+        border: 0px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 20px;
+        background-color: white;
+        align-items: justify;
+
+    }
+    .modal-content-indi{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap:10px
+    }
+    .modal-content-indi img{
+        height: 100px;width: 100px;
+    }
+    .modal-content-indi p {
+        text-align: justify;
+        font-size: 14px;
+        font-weight:100 !important;
+      
+    }
+    .modal-content-indi h1 {
+        text-align: justify;
+        font-size: 25px;
+        text-transform: uppercase;
+        
+    }

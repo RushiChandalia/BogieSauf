@@ -1,0 +1,20 @@
+{
+  "Types": [
+    {
+      "name": "Diamond",
+      "description": "The special model stands for premium purpose and it is under developing stage. Inside it, the driver owns a fully automatic voice-operated system. It includes two extra power compressors with a 12 V DC battery which creates the system more dominant. The model comprises an extra-large air storage tank that is capable of infilling all four tires at once. The model impact has a voice warning alarm that pronounced warning speech in the corresponding person's voice. It enables the individual tire pressure control (ex. To adjust the pressure of a single tire at a time and not to affect others) that is helpful in state of OFF ROAD driving. The model covers wheel caps that close the complete wheel approaching the futuristically designed fender flares with autonomous LED lights that reflect on a 6-way refraction glass - obtaining major eye-catching. The product holds 2 years guarantee and 5 years warranty."
+    },
+    {
+      "name": "Platinum",
+      "description": "The model stands for semi-automatic under designing process yet higher focused on the appearances/aesthetics of the vehicle. It implies a number-operated system with a 12 V DC battery and a high-power air compressor included. The model additionally carries an air storage tank and owns a warning alarm for the drivers. The model owns futuristic fender flares with LED lights covering it presenting the vehicle as plentiful eye-catching and muscular. The product holds a 1-year guarantee and 3 years warranty. "
+    },
+    {
+      "name": "Gold",
+      "description": "The model stands for semi-automatic that is numbers operated that a driver must need to input a number (ex. 35 PSI, 2 BAR) moreover the system maintains the pressure accordingly. It carries one air compressor with an air storage tank and owns futuristic design fender flares. The product holds* 3-year warranty*."
+    },
+    {
+      "name": "Silver",
+      "description": "The model remains manual as buttons are determined in which the driver can adjust the pressure by the same. It carries one air compressor and owns standard fender flares on the wheels. The product holds a * 1-year warranty*."
+    }
+  ]
+}
