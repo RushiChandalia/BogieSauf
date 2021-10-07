@@ -71,7 +71,7 @@ const Buttons = () =>{
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}><a href={GujaratiPDF} target="_blank" rel="noreferrer">Gujarati</a></MenuItem>
+        <MenuItem onClick={handleClose}><a href={GujaratiPDF} target="_blank"  rel="noreferrer">Gujarati</a></MenuItem>
         <MenuItem onClick={handleClose}><a href={EnglishPDF} target="_blank" rel="noreferrer">English</a></MenuItem>
       </Menu>
     </div>

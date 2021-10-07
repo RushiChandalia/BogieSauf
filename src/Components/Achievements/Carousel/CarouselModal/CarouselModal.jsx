@@ -55,7 +55,7 @@ export default function CarouselModal({ open, handleClose, state }) {
     case "Maker Fest Vadodara 2021":
       return (
         <div>
-          <Modal open={open} onClose={handleClose} className="modal-wrapper" >
+          <Modal  open={open} onClose={handleClose} className="modal-wrapper" >
             <div className="makers">
               <img src={Makers1} id="Compi_certi" className={`compi_makers`} alt="" />
               <img src={Makers2} id="Compi_certi" className={`compi_makers`} alt="" />
@@ -76,6 +76,7 @@ export default function CarouselModal({ open, handleClose, state }) {
       );
 
     default:
-      return <h1>default</h1>
+      break;
   }
+  return null
 }

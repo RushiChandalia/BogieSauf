@@ -105,10 +105,6 @@ export default function Carousel({setState, setOpen}) {
             case "MAGIC's (Marathwada Accelerator for Growth & Incubation Council)":
               return (
                 <SwiperSlide
-                  onClick={() => {
-                    setState(a.name);
-                    setOpen(true);
-                  }}
                   key={i}
                 >
                   <div className="slide-content">

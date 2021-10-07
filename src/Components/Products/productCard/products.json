@@ -1,14 +1,14 @@
 {
   "products": [
     {
-      "name": "Two Wheel",
+      "name": "Two Wheeler",
       "code": "Bike"
     },
-    { "name": "Three Wheel", "code": "Rickshaw" },
-    { "name": "Four Wheel", "code": "Car" },
+    { "name": "Three Wheeler", "code": "Rickshaw" },
+    { "name": "Four Wheeler", "code": "Car" },
     
-    { "name": "Six - Eight Wheel", "code": "Bus"},
-    { "name": "Multi Wheel", "code": "Truck"},
-    { "name": "Special Purpose", "code": "Van"}
+    { "name": "Six - Eight Wheeler", "code": "Bus"},
+    { "name": "multi wheel vehicle", "code": "Truck"},
+    { "name": "special purpose vehicle", "code": "Van"}
   ]
 }
