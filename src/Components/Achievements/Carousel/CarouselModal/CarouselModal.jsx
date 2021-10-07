@@ -6,6 +6,8 @@ import Divya from "../../../../Images/Divya.jpg";
 import StartUp from "./Achievements_certi/startupgrind.jpeg"
 import Makers1 from "./Achievements_certi/makers.jpeg"
 import Makers2 from "./Achievements_certi/maker2.jpeg"
+import Lemon1 from "./Achievements_certi/Lemon1.jpeg"
+import Lemon2 from "./Achievements_certi/Lemon2.jpeg"
 
 import "./carouselDesktop.css"
 export default function CarouselModal({ open, handleClose, state }) {
@@ -57,6 +59,17 @@ export default function CarouselModal({ open, handleClose, state }) {
             <div className="makers">
               <img src={Makers1} id="Compi_certi" className={`compi_makers`} alt="" />
               <img src={Makers2} id="Compi_certi" className={`compi_makers`} alt="" />
+            </div>
+          </Modal>
+        </div>
+      );
+    case "Innopreneurs International Startup Contest (6th Edition)":
+      return (
+        <div>
+          <Modal open={open} onClose={handleClose} className="modal-wrapper" >
+            <div className="makers">
+              <img src={Lemon1} id="Compi_certi" className={`compi_makers`} alt="" />
+              <img src={Lemon2} id="Compi_certi" className={`compi_makers`} alt="" />
             </div>
           </Modal>
         </div>

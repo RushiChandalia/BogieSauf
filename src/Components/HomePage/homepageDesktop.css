@@ -20,7 +20,7 @@
     width: 70%;
   }
   .banner-content .banner-button {
-    padding: 5px 25px !important;
+    padding: 12px 25px !important;
     border: 2px solid var(--accent-color);
     background-color: transparent;
     width: fit-content !important;
@@ -34,6 +34,7 @@
     column-gap: 10px;
     cursor: pointer;
   }
+  
   .banner-content .banner-button:hover{
     background-color:var(--accent-color);
     transition: 0.3s ease;

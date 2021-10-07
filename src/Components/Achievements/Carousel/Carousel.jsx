@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import Pitch from "../../../Images/StartupGrind_Ahmedabad,-IN_Logo_Square_White.jpg";
