@@ -37,7 +37,6 @@ const Form = () => {
       });
       setLoading(false);
     } else {
-      console.log(process.env.REACT_APP_USER_ID,serviceID,templateID);
       response = await emailjs.send(
         serviceID,
         templateID,

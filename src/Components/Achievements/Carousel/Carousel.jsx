@@ -26,6 +26,7 @@ SwiperCore.use([EffectCoverflow, Autoplay, Pagination]);
 export default function Carousel() {
   return (
     <Swiper
+    data-aos = "fade-right"
       effect={"coverflow"}
       grabCursor={true}
       autoplay={{
@@ -47,7 +48,7 @@ export default function Carousel() {
         switch (a.name) {
           case "Pitchbattle":
             return (
-              <SwiperSlide>
+              <SwiperSlide key={i}>
                 <div className="slide-content">
                   <img src={Pitch} alt="slide" />
                   <span>
@@ -59,7 +60,7 @@ export default function Carousel() {
             );
           case "Innopreneurs International Startup Contest (6th Edition)":
             return (
-              <SwiperSlide>
+              <SwiperSlide key={i}>
                 <div className="slide-content">
                   <img src={Lemon} alt="slide" />
                   <span>
@@ -71,7 +72,7 @@ export default function Carousel() {
             );
           case "Maker Fest Vadodara 2021":
             return (
-              <SwiperSlide>
+              <SwiperSlide key={i}>
                 <div className="slide-content">
                   <img src={Maker} alt="slide" />
                   <span>
@@ -83,7 +84,7 @@ export default function Carousel() {
             );
           case "MAGIC's (Marathwada Accelerator for Growth & Incubation Council)":
             return (
-              <SwiperSlide>
+              <SwiperSlide key={i}>
                 <div className="slide-content">
                   <img src={Maratha} alt="slide" />
                   <span>

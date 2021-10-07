@@ -46,7 +46,7 @@ const About = () => {
       <div className="about-desktop">
         <div className="about-tabs">
           <span
-            className={`${tab === "About" ? "tab-active" : ""} tab`}
+            className={`tab ${tab === "About" ? "tab-active" : ""}`}
             onClick={() => {
               setTab("About");
             }}
@@ -54,7 +54,7 @@ const About = () => {
             <p>About Us & Mission</p>
           </span>
           <span
-            className={`${tab === "Team" ? "tab-active" : ""} tab`}
+            className={`tab ${tab === "Team" ? "tab-active" : ""}`}
             onClick={() => {
               setTab("Team");
             }}
