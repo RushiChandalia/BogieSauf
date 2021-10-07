@@ -2,7 +2,8 @@
     .Footer {
         display: grid;
         grid-template-columns: auto auto auto !important;
-        justify-content: baseline !important;
+        justify-content:baseline !important;
+        
     }
     .Footer .logo img{
         height: 50px;
@@ -31,7 +32,7 @@
     }
     .Footer .footer-info{
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
         align-self: center;
         font-size:14px;
         color: var(--primary-color);
