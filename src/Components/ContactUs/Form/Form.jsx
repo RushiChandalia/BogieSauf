@@ -303,17 +303,17 @@ const Form = () => {
             type="checkbox"
             id="Multi-purpose vehicle"
             name="bogie-products"
-            value="Multi-purpose vehicle"
+            value="Special-purpose vehicle"
             onChange={(e) => {
               onCheckboxChange(e);
             }}
           />
-          <label>Multi-purpose vehicle</label>
+          <label>Special-purpose vehicle</label>
           <br />
         </span>
       </div>
 
-      <button type="submit" onClick={handleSubmit} className=" form-btn">
+      <button type="submit" onClick={handleSubmit} className="form-btn">
         {" "}
         {loading ? (
           <CircularProgress className="loader" color="primary" size={20} />

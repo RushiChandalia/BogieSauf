@@ -24,6 +24,8 @@
     font-size:12px;font-style: italic;
 }
 .Footer .footer-info{
+    display: flex;
+    justify-content: space-around;
     width:100%
    
 }
@@ -36,6 +38,13 @@
     font-style: italic;
     font-size:12px;
 
+}
+.footer-info h4{
+ display: flex;
+ column-gap:5px
+}
+#whatsapp-imgae{
+    height: 25px;
 }
 .Footer .footer-follow img{
     height: 25px;

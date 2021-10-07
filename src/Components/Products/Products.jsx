@@ -60,7 +60,7 @@ const Buttons = () =>{
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        Get Details
+        Get Product Details
       </Button>
       <Menu
         id="basic-menu"

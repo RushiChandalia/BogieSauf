@@ -5,6 +5,7 @@ import LinkedIn from "../../Images/linkedin.png"
 import Instagram from "../../Images/instagram.png"
 import Facebook from "../../Images/facebook.png"
 import Twitter from "../../Images/twitter.png"
+import WhatsApp from "../../Images/whatsapp.png"
 import "./footerDesktop.css"
 const Footer = () => {
     return (
@@ -18,6 +19,12 @@ const Footer = () => {
                 <p> We care for you. We work for you.</p>
             </div>
             <div className="footer-info">
+                <div>
+                    <h4>
+                        Ping us on <img id="whatsapp-imgae" src={WhatsApp} alt="WhatsApp" />
+                    </h4>
+                    <p>+91 9016386215</p>
+                </div>
                 <div className="footer-follow">
                     <h4>Follow Us</h4>
                     <a href="https://www.linkedin.com/company/bogie2021/" target="_blank" rel="noreferrer"><img src={LinkedIn} alt="LinkedIn" /></a>
