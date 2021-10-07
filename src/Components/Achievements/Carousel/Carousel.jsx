@@ -26,8 +26,7 @@ SwiperCore.use([EffectCoverflow, Autoplay, Pagination]);
 export default function Carousel() {
   return (
     <Swiper
-    data-aos = "fade-right"
-      effect={"coverflow"}
+   effect={"coverflow"}
       grabCursor={true}
       autoplay={{
         delay: 2500,
