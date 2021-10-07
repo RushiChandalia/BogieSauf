@@ -30,15 +30,20 @@
     display: flex !important;
     /* background-color:cyan; */
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end !important;
+    column-gap: 30px;
     align-items: center;
     font-weight: 500;
+    font-size:15px;
   }
   .navbar .navList a {
     text-decoration: none;
     color: var(--primary-color);
     text-transform: uppercase;
     padding: 10px 0px;
+    font-size:14px;
+    text-align: center;
+    width: 100%;
   }
   .navbar .navList a:hover {
     transform: translateY(-4px);
