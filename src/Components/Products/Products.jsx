@@ -52,7 +52,7 @@ const Buttons = () =>{
   };
 
   return (
-    <div className="product-button-wrapper">
+    <div data-aos="fade-up" data-aos-delay="200" className="product-button-wrapper">
       <Button
         id="basic-button"
         aria-controls="basic-menu"
