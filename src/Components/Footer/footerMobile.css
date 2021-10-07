@@ -3,7 +3,7 @@
     box-sizing: border-box;
     display: grid;
     grid-template-columns: auto;
-    row-gap: 10px;
+    row-gap: 20px;
 }
 .Footer .logo{
     display: flex;
@@ -13,11 +13,9 @@
     text-transform:uppercase;
 }
 .Footer .logo img{
-    height: 100px;
+    height: 50px;
 }
-.Footer .footer-slogan{
-    display: none;
-}
+
 .Footer .footer-slogan p:nth-child(1){
     font-size:20px;
     font-weight: 500;
@@ -28,6 +26,7 @@
 .Footer .footer-info{
     display: flex;
     justify-content: space-between;
+    width:100%
    
 }
 .Footer .footer-info h4{
@@ -39,6 +38,13 @@
     font-style: italic;
     font-size:12px;
 
+}
+.footer-info h4{
+ display: flex;
+ column-gap:5px
+}
+#whatsapp-imgae{
+    height: 25px;
 }
 .Footer .footer-follow img{
     height: 25px;

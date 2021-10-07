@@ -20,88 +20,142 @@ import "./styles.css";
 // import Swiper core and required modules
 import SwiperCore, { EffectCoverflow, Autoplay, Pagination } from "swiper";
 import Achie from "./Achievements.json";
+
 // install Swiper modules
 SwiperCore.use([EffectCoverflow, Autoplay, Pagination]);
 
-export default function Carousel() {
+export default function Carousel({setState, setOpen}) {
+ 
   return (
-    <Swiper
-   effect={"coverflow"}
-      grabCursor={true}
-      autoplay={{
-        delay: 2500,
-        disableOnInteraction: false,
-      }}
-      centeredSlides={true}
-      slidesPerView={"auto"}
-      coverflowEffect={{
-        rotate: 50,
-        stretch: 0,
-        depth: 0,
-        modifier: 3,
-        slideShadows: true,
-      }}
-      pagination={true}
-    >
-      {Achie.Achievements.map((a, i) => {
-        switch (a.name) {
-          case "Pitchbattle":
-            return (
-              <SwiperSlide key={i}>
-                <div className="slide-content">
-                  <img src={Pitch} alt="slide" />
-                  <span>
-                    <h1>{a.name}</h1>
-                    <p>{a.description}</p>
-                  </span>
-                </div>
-              </SwiperSlide>
-            );
-          case "Innopreneurs International Startup Contest (6th Edition)":
-            return (
-              <SwiperSlide key={i}>
-                <div className="slide-content">
-                  <img src={Lemon} alt="slide" />
-                  <span>
-                    <h1>{a.name}</h1>
-                    <p>{a.description}</p>
-                  </span>
-                </div>
-              </SwiperSlide>
-            );
-          case "Maker Fest Vadodara 2021":
-            return (
-              <SwiperSlide key={i}>
-                <div className="slide-content">
-                  <img src={Maker} alt="slide" />
-                  <span>
-                    <h1>{a.name}</h1>
-                    <p>{a.description}</p>
-                  </span>
-                </div>
-              </SwiperSlide>
-            );
-          case "MAGIC's (Marathwada Accelerator for Growth & Incubation Council)":
-            return (
-              <SwiperSlide key={i}>
-                <div className="slide-content">
-                  <img src={Maratha} alt="slide" />
-                  <span>
-                    <h1>{a.name}</h1>
-                    <p>{a.description}</p>
-                  </span>
-                </div>
-              </SwiperSlide>
-            );
-                   default:
-            break;
-        }
+    <>
+      <Swiper
+        effect={"coverflow"}
+        grabCursor={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        centeredSlides={true}
+        slidesPerView={"auto"}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 0,
+          modifier: 3,
+          slideShadows: true,
+        }}
+        pagination={true}
+      >
+        {Achie.Achievements.map((a, i) => {
+          switch (a.name) {
+            case "Pitchbattle":
+              return (
+                <SwiperSlide
+                  onClick={() => {
+                    setState(a.name);
+                    setOpen(true);
+                  }}
+                  key={i}
+                >
+                  <div className="slide-content">
+                    <img src={Pitch} alt="slide" />
+                    <span>
+                      <h1>{a.name}</h1>
+                      <p>{a.description}</p>
+                    </span>
+                  </div>
+                </SwiperSlide>
+              );
+            case "Innopreneurs International Startup Contest (6th Edition)":
+              return (
+                <SwiperSlide
+                  onClick={() => {
+                    setState(a.name);
+                    setOpen(true);
+                  }}
+                  key={i}
+                >
+                  <div className="slide-content">
+                    <img src={Lemon} alt="slide" />
+                    <span>
+                      <h1>{a.name}</h1>
+                      <p>{a.description}</p>
+                    </span>
+                  </div>
+                </SwiperSlide>
+              );
+            case "Maker Fest Vadodara 2021":
+              return (
+                <SwiperSlide
+                  onClick={() => {
+                    setState(a.name);
+                    setOpen(true);
+                  }}
+                  key={i}
+                >
+                  <div className="slide-content">
+                    <img src={Maker} alt="slide" />
+                    <span>
+                      <h1>{a.name}</h1>
+                      <p>{a.description}</p>
+                    </span>
+                  </div>
+                </SwiperSlide>
+              );
+            case "MAGIC's (Marathwada Accelerator for Growth & Incubation Council)":
+              return (
+                <SwiperSlide
+                  key={i}
+                >
+                  <div className="slide-content">
+                    <img src={Maratha} alt="slide" />
+                    <span>
+                      <h1>{a.name}</h1>
+                      <p>{a.description}</p>
+                    </span>
+                  </div>
+                </SwiperSlide>
+              );
+            default:
+              break;
+          }
 
-        return null;
-      })}
-    <SwiperSlide><img src={RP} alt="RP" height={200} /></SwiperSlide>
-    <SwiperSlide><img src={DNA} alt="RP" height={200} /></SwiperSlide>
-    <SwiperSlide><img src={Divya} alt="RP" height={200} /></SwiperSlide>
-    </Swiper>
+          return null;
+        })}
+        <SwiperSlide>
+          <img
+            src={RP}
+            alt="RP"
+            height={200}
+            onClick={() => {
+              setState("RP");
+              setOpen(true);
+            }}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src={DNA}
+            alt="RP"
+            height={200}
+            onClick={() => {
+              setState("DNA");
+              setOpen(true);
+            }}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src={Divya}
+            alt="RP"
+            height={200}
+            onClick={() => {
+              setState("Divya");
+              setOpen(true);
+            }}
+          />
+        </SwiperSlide>
+      </Swiper>
+    </>
   );
 }

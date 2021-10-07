@@ -18,6 +18,32 @@
     font-style:italic;
     text-transform: capitalize;
 }
+ .product-content .product-button-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+a{
+    text-decoration: none;
+    color:var(--primary-color);
+}
+#basic-button{
+    padding: 10px 15px;
+    border: 2px solid var(--accent-color);
+    background-color: transparent;
+    width: fit-content;
+    color: var(--secondary-color);
+    margin-top: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    cursor: pointer; 
+    margin:0;
+
+}
 .product-cards{
     display: grid;
     grid-template-columns: auto auto;

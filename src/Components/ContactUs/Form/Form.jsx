@@ -247,6 +247,19 @@ const Form = () => {
         <span>
           <input
             type="checkbox"
+            id="Auto Rickshaw"
+            name="bogie-products"
+            value="Auto Rickshaw"
+            onChange={(e) => {
+              onCheckboxChange(e);
+            }}
+          />
+          <label>Auto Rickshaw</label>
+          <br />
+        </span>
+        <span>
+          <input
+            type="checkbox"
             id="Car"
             name="bogie-products"
             value="Car"
@@ -258,19 +271,7 @@ const Form = () => {
           <br />
         </span>
        
-        <span>
-          <input
-            type="checkbox"
-            id="Auto Rickshaw"
-            name="bogie-products"
-            value="Auto Rickshaw"
-            onChange={(e) => {
-              onCheckboxChange(e);
-            }}
-          />
-          <label>Auto Rickshaw</label>
-          <br />
-        </span>
+      
         <span>
           <input
             type="checkbox"
@@ -287,32 +288,32 @@ const Form = () => {
         <span>
           <input
             type="checkbox"
-            id="Bike"
+            id="Multi-Wheel vehicle"
             name="bogie-products"
-            value="Bike"
+            value="Multi-Wheel vehicle"
             onChange={(e) => {
               onCheckboxChange(e);
             }}
           />
-          <label>Multi-Wheel</label>
+          <label>Multi-Wheel vehicle</label>
           <br />
         </span>
         <span>
           <input
             type="checkbox"
-            id="Bike"
+            id="Multi-purpose vehicle"
             name="bogie-products"
-            value="Bike"
+            value="Special-purpose vehicle"
             onChange={(e) => {
               onCheckboxChange(e);
             }}
           />
-          <label>Multi-purpose</label>
+          <label>Special-purpose vehicle</label>
           <br />
         </span>
       </div>
 
-      <button type="submit" onClick={handleSubmit} className=" form-btn">
+      <button type="submit" onClick={handleSubmit} className="form-btn">
         {" "}
         {loading ? (
           <CircularProgress className="loader" color="primary" size={20} />
