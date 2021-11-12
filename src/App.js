@@ -1,14 +1,10 @@
 import "./App.css";
-import HomePage from "./Components/HomePage/Homepage";
-import Navbar from "./Components/NavBar/navbar";
-import Products from "./Components/Products/Products";
-import Contact from "./Components/ContactUs/Contact";
-import Footer from "./Components/Footer/Footer.jsx";
-import Achievements from "./Components/Achievements/Achievements";
-import About from "./Components/AboutUs/About";
+import Main from "./Main";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Admin from "./Components/Admin/Admin.jsx";
 import { useEffect, useState } from "react";
-import Gear from "./Images/animation_500_ku9j2ktm.gif"
-import 'react-toastify/dist/ReactToastify.css';
+import Gear from "./Images/animation_500_ku9j2ktm.gif";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -27,23 +23,22 @@ function App() {
   }, [loading]);
 
   return (
-    <div className="App">
-      {loading ? (
-        <div className="App-loader">
-          <img src={Gear} alt=""/>
-        </div>
-      ) : (
-        <>
-          <Navbar />
-          <HomePage />
-          <About />
-          <Products />
-          <Achievements/>
-          <Contact />
-          <Footer />
-        </>
-      )}
-    </div>
+    <Router>
+      <div className="App">
+        {loading ? (
+          <div className="App-loader">
+            <img src={Gear} alt="" />
+          </div>
+        ) : (
+          <>
+            <Switch>
+              <Route exact path="/" component={Main} />
+              <Route path="/admin" component={Admin} />
+            </Switch>
+          </>
+        )}
+      </div>
+    </Router>
   );
 }
 

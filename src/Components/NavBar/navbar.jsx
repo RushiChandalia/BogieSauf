@@ -1,5 +1,7 @@
 import React from "react";
 import "./navbarDesktop.css";
+
+
 import Logo from "../../Images/bogie_sauf_logo.png";
 import "./navbarMobile.css";
 import Drawer from "./Drawer/mobileDrawer";
@@ -46,6 +48,7 @@ const Navbar = () => {
           <a href="/#Products">Products</a>
           <a href="/#Achievements">Achievements</a>
           <a href="/#Contact Us">Contact Us</a>
+
         </div>
         <Drawer />
       

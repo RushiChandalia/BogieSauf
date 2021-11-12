@@ -1,8 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./teamCard.css";
-import Mayur from "./TeamImages/Mayur Mahla.jpg";
-import Gaurav from "./TeamImages/Gaurav Chale.png";
-import Ranu from "./TeamImages/Ranu Agarwal.png";
 import LinkedIn from "../../../Images/linkedin.png";
 import Instagram from "../../../Images/instagram.png";
 import Twitter from "../../../Images/twitter.png";
@@ -10,73 +7,114 @@ import Facebook from "../../../Images/facebook.png";
 import Youtube from "../../../Images/youtube.png";
 import Blogspot from "../../../Images/blogging.png";
 import "./teamCardDesktop.css";
-const TeamCard = ({ info, index }) => {
-  switch (info.name) {
-    case "Mayur Mahla":
-      return <Card image={Mayur}key={index} index = {index} info={info} />;
+import axios from "axios";
+const TeamCard = () => {
+  const [teamData, setTeamData] = useState({
+    data: [],
+    loading: true,
+  });
+  useEffect(() => {
+    axios
+      .get(`${process.env.REACT_APP_backend_server_dev}/team/`)
+      .then((data) => {
+        setTeamData({ data: data.data, loading: false });
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
-    case "Gaurav Chale":
-      return <Card image={Gaurav} index = {index} info={info} />;
+  return (
+    <>
+      {teamData.data.map((info, index) => {
+        return (
+          <div
+            data-aos={index % 2 === 0 ? "flip-right" : "flip-left"}
+            data-aos-duration="500"
+            className="card-wrapper"
+            key={index}
+          >
+            <img src={`${process.env.REACT_APP_backend_server_dev}${info.profile}`} alt="" />
+            <div className="card-content">
+              <h2>{info.name}</h2>
+              <p>{info.position}</p>
+              <div className="social-media">
+                {info.socialMedia.map((soc, index) => {
+                  switch (soc.plat) {
+                    case "LinkedIn":
+                      return (
+                        <SocialLinks
+                          index={index}
+                          key={index}
+                          image={LinkedIn}
+                          link={soc.Link}
+                        />
+                      );
 
-    case "Ranu Agrawal":
-      return <Card image={Ranu} index = {index} info={info} />;
+                    case "Twitter":
+                      return (
+                        <SocialLinks
+                          index={index}
+                          key={index}
+                          image={Twitter}
+                          link={soc.Link}
+                        />
+                      );
 
-    default:
-      break;
-  }
+                    case "Instagram":
+                      return (
+                        <SocialLinks
+                          index={index}
+                          key={index}
+                          image={Instagram}
+                          link={soc.Link}
+                        />
+                      );
+
+                    case "Facebook":
+                      return (
+                        <SocialLinks
+                          index={index}
+                          key={index}
+                          image={Facebook}
+                          link={soc.Link}
+                        />
+                      );
+
+                    case "Youtube":
+                      return (
+                        <SocialLinks
+                          index={index}
+                          key={index}
+                          image={Youtube}
+                          link={soc.Link}
+                        />
+                      );
+                    case "Blogspot":
+                      return (
+                        <SocialLinks
+                          index={index}
+                          key={index}
+                          image={Blogspot}
+                          link={soc.Link}
+                        />
+                      );
+
+                    default:
+                      break;
+                  }
+                  return null;
+                })}
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </>
+  );
 };
 
 export default TeamCard;
 
-const Card = ({ image, info,index }) => (
-  <div data-aos={index % 2 === 0 ? "flip-right" : "flip-left"} data-aos-duration="500"  className="card-wrapper">
-    <img src={image} alt="" />
-    <div className="card-content">
-      <h2>{info.name}</h2>
-      <p>{info.position}</p>
-      <div className="social-media">
-        {info.Socials.map((soc, index) => {
-          switch (soc.plat) {
-            case "LinkedIn":
-              return (
-                <SocialLinks index={index} key={index} image={LinkedIn} link={soc.Link} />
-              );
-
-            case "Twitter":
-              return (
-                <SocialLinks index={index} key={index} image={Twitter} link={soc.Link} />
-              );
-
-            case "Instagram":
-              return (
-                <SocialLinks index={index} key={index} image={Instagram} link={soc.Link} />
-              );
-
-            case "Facebook":
-              return (
-                <SocialLinks index={index} key={index} image={Facebook} link={soc.Link} />
-              );
-
-            case "Youtube":
-              return (
-                <SocialLinks index={index} key={index} image={Youtube} link={soc.Link} />
-              );
-            case "Blogspot":
-              return (
-                <SocialLinks index={index} key={index} image={Blogspot} link={soc.Link} />
-              );
-
-            default:
-              break;
-          }
-          return null;
-        })}
-      </div>
-    </div>
-  </div>
-);
-
-const SocialLinks = ({index, image, link }) => (
+const SocialLinks = ({ index, image, link }) => (
   <span key={index}>
     <a target="_blank" rel="noreferrer" href={link}>
       <img src={image} alt="" />
