@@ -36,7 +36,7 @@ export default function Team() {
   };
   React.useEffect(() => {
     fetchData();
-  }, [data]);
+  }, []);
 
   const handleDeleteTeamMember = (id) => {
     const ans = window.confirm("Are you sure you want to delete?");

@@ -8,32 +8,32 @@ import Drawer from "./Drawer/mobileDrawer";
 import { Link } from "react-router-dom";
 const Navbar = () => {
     
-  let lastScroll = 0;
-  const changeColor = () => {
-    const navbar = document.getElementById("navbar");
-    const currentScroll = window.pageYOffset;
-    if (currentScroll <= 0) {
-      navbar.classList.remove("scroll-up");
-      return;
-    }
+  // let lastScroll = 0;
+  // const changeColor = () => {
+  //   const navbar = document.getElementById("navbar");
+  //   const currentScroll = window.pageYOffset;
+  //   if (currentScroll <= 0) {
+  //     navbar.classList.remove("scroll-up");
+  //     return;
+  //   }
 
-    if (
-      currentScroll > lastScroll &&
-      !navbar.classList.contains("scroll-down")
-    ) {
-      navbar.classList.remove("scroll-up");
-      navbar.classList.add("scroll-down");
-    } else if (
-      currentScroll < lastScroll &&
-      navbar.classList.contains("scroll-down")
-    ) {
-      navbar.classList.remove("scroll-down");
-      navbar.classList.add("scroll-up");
-    }
-    lastScroll = currentScroll;
-  };
+  //   if (
+  //     currentScroll > lastScroll &&
+  //     !navbar.classList.contains("scroll-down")
+  //   ) {
+  //     navbar.classList.remove("scroll-up");
+  //     navbar.classList.add("scroll-down");
+  //   } else if (
+  //     currentScroll < lastScroll &&
+  //     navbar.classList.contains("scroll-down")
+  //   ) {
+  //     navbar.classList.remove("scroll-down");
+  //     navbar.classList.add("scroll-up");
+  //   }
+  //   lastScroll = currentScroll;
+  // };
 
-  window.addEventListener("scroll", changeColor);
+  // window.addEventListener("scroll", changeColor);
   window.addEventListener("resize", function () {
     if (window.innerWidth < 992) console.log("size changed");
   });

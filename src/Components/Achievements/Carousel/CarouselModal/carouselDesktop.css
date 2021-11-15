@@ -1,78 +1,23 @@
-@media screen  and (min-width: 992px){
-    .modal-wrapper{
+@media screen and (min-width: 992px) {
+    .modal-wrapper {
+        height:100vh;
+        width: 100%;
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
+        column-gap: 10px;
     }
     .modal-content{
+        height:100%;
+        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: center;
+        align-items: center;
+        column-gap: 40px;
     }
-    #newspaper_articles{
-        transition:transform 2s ease;
+    #modal-images {
+        height: 500px;
+        width: 700px;
     }
-    .modal-content .newspaper_RP{
-        transform: scale(1.5) !important;
-    }
-    .modal-content .newspaper_DNA{
-        transform: scale(1.1) !important;
-    }
-    .modal-content .newspaper_Divya{
-        transform: scale(0.95) !important;
-    }
-    
-    .compi_Pitchbattle{
-        transform: scale(0.9)
-    }
-    
-    
-    .makers{
-        display: flex;
-        column-gap: 50px;
-        justify-content: center;
-    }
-    .makers img{
-        height:40%;
-        width: 40%;
-    } 
-}
-
-
-.modal-wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.modal-content{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-#newspaper_articles{
-    transition:transform 2s ease;
-}
-.modal-content .newspaper_RP{
-    transform: scale(1);
-}
-.modal-content .newspaper_DNA{
-    transform: scale(0.35);
-}
-.modal-content .newspaper_Divya{
-    transform: scale(0.5);
-}
-
-.compi_Pitchbattle{
-    transform: scale(0.9)
-}
-
-
-.makers{
-    display: flex;
-    column-gap: 50px;
-    justify-content: center;
-}
-.makers img{
-    height:45%;
-    width: 45%;
 }

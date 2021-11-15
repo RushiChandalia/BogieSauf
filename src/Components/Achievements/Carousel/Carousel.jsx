@@ -1,13 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import Pitch from "../../../Images/StartupGrind_Ahmedabad,-IN_Logo_Square_White.jpg";
-import Lemon from "../../../Images/Lemon Ideas.png";
-import Maratha from "../../../Images/Maratha.png";
-import Maker from "../../../Images/Maker.png";
-import DNA from "../../../Images/DNA.jpg";
-import Divya from "../../../Images/Divya.jpg";
-import RP from "../../../Images/RP.jpg";
 // Import Swiper styles
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
@@ -19,13 +12,30 @@ import "./styles.css";
 
 // import Swiper core and required modules
 import SwiperCore, { EffectCoverflow, Autoplay, Pagination } from "swiper";
-import Achie from "./Achievements.json";
+
+import axios from "axios";
+import { Skeleton } from "@mui/material";
 
 // install Swiper modules
 SwiperCore.use([EffectCoverflow, Autoplay, Pagination]);
 
-export default function Carousel({setState, setOpen}) {
- 
+export default function Carousel({ setOpen, setState }) {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const fetchData = () => {
+    setLoading(true);
+    axios
+      .get(`${process.env.REACT_APP_backend_server_dev}/achieve/`)
+      .then((data) => {
+        setLoading(false);
+        setData(data.data);
+      })
+      .catch((err) => console.log(err));
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
   return (
     <>
       <Swiper
@@ -46,116 +56,93 @@ export default function Carousel({setState, setOpen}) {
         }}
         pagination={true}
       >
-        {Achie.Achievements.map((a, i) => {
-          switch (a.name) {
-            case "Pitchbattle":
-              return (
-                <SwiperSlide
+        {data.map((a, index) => {
+          if (a.Description === "") {
+            return (
+              <SwiperSlide key={index}>
+                <img
+                  src={`${process.env.REACT_APP_backend_server_dev}${a.Show}`}
+                  alt="RP"
+                  height={200}
                   onClick={() => {
-                    setState(a.name);
+                    setState([a.Show]);
                     setOpen(true);
                   }}
-                  key={i}
-                >
-                  <div className="slide-content">
-                    <img src={Pitch} alt="slide" />
-                    <span>
-                      <h1>{a.name}</h1>
-                      <p>{a.description}</p>
-                    </span>
-                  </div>
-                </SwiperSlide>
-              );
-            case "Innopreneurs International Startup Contest (6th Edition)":
-              return (
-                <SwiperSlide
+                />
+              </SwiperSlide>
+            );
+          } else {
+            return (
+              <SwiperSlide key={index}>
+                <div
                   onClick={() => {
-                    setState(a.name);
-                    setOpen(true);
+                    if (a.Others.length === 0) {
+                      console.log("empty");
+                    } else {
+                      setState(a.Others);
+                      setOpen(true);
+                    }
                   }}
-                  key={i}
+                  className="slide-content"
                 >
-                  <div className="slide-content">
-                    <img src={Lemon} alt="slide" />
+                  {loading ? (
+                    <Skeleton variant="rectangular" height={150} width={150} />
+                  ) : (
+                    <img
+                      src={`${process.env.REACT_APP_backend_server_dev}${a.Show}`}
+                      alt=""
+                    />
+                  )}
+                  {a.AwardName === "" && a.Description === "" ? null : (
                     <span>
-                      <h1>{a.name}</h1>
-                      <p>{a.description}</p>
+                      {a.AwardName === "" ? null : <h1>{a.AwardName}</h1>}
+                      {a.Description === "" ? null : <p>{a.Description}</p>}
                     </span>
-                  </div>
-                </SwiperSlide>
-              );
-            case "Maker Fest Vadodara 2021":
-              return (
-                <SwiperSlide
-                  onClick={() => {
-                    setState(a.name);
-                    setOpen(true);
-                  }}
-                  key={i}
-                >
-                  <div className="slide-content">
-                    <img src={Maker} alt="slide" />
-                    <span>
-                      <h1>{a.name}</h1>
-                      <p>{a.description}</p>
-                    </span>
-                  </div>
-                </SwiperSlide>
-              );
-            case "MAGIC's (Marathwada Accelerator for Growth & Incubation Council)":
-              return (
-                <SwiperSlide
-                  key={i}
-                >
-                  <div className="slide-content">
-                    <img src={Maratha} alt="slide" />
-                    <span>
-                      <h1>{a.name}</h1>
-                      <p>{a.description}</p>
-                    </span>
-                  </div>
-                </SwiperSlide>
-              );
-            default:
-              break;
+                  )}
+                </div>
+              </SwiperSlide>
+            );
           }
-
-          return null;
         })}
-        <SwiperSlide>
-          <img
-            src={RP}
-            alt="RP"
-            height={200}
-            onClick={() => {
-              setState("RP");
-              setOpen(true);
-            }}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src={DNA}
-            alt="RP"
-            height={200}
-            onClick={() => {
-              setState("DNA");
-              setOpen(true);
-            }}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src={Divya}
-            alt="RP"
-            height={200}
-            onClick={() => {
-              setState("Divya");
-              setOpen(true);
-            }}
-          />
-        </SwiperSlide>
       </Swiper>
     </>
   );
 }
+
+// {
+//   /* <img src={`${process.env.REACT_APP_backend_server_dev}${a.Show}`} alt="" />; */
+// }
+
+// <SwiperSlide>
+// <img
+//   src={RP}
+//   alt="RP"
+//   height={200}
+//   onClick={() => {
+//     setState("RP");
+//     setOpen(true);
+//   }}
+// />
+// </SwiperSlide>
+// <SwiperSlide>
+// <img
+//   src={DNA}
+//   alt="RP"
+//   height={200}
+//   onClick={() => {
+//     setState("DNA");
+//     setOpen(true);
+//   }}
+// />
+// </SwiperSlide>
+// <SwiperSlide>
+// <img
+//   src={Divya}
+//   alt="RP"
+//   height={200}
+//   onClick={() => {
+//     setState("Divya");
+//     setOpen(true);
+//   }}
+// />
+// </SwiperSlide>

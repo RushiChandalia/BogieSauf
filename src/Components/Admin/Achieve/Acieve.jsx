@@ -9,12 +9,12 @@ import Paper from "@mui/material/Paper";
 import { Button } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
-import "./Blog.css";
+import "./Achieve.css";
 import axios from "axios";
 import AddForm from "./AddEditForm/AddForm";
 import EditForm from "./AddEditForm/EditForm";
 
-export default function Team() {
+export default function Achievements() {
   const [data, setData] = React.useState([]);
   const [isEdit, setEdit] = React.useState(false);
   const [id, setId] = React.useState("");
@@ -28,7 +28,7 @@ export default function Team() {
 
   const fetchData = () => {
     axios
-      .get(`${process.env.REACT_APP_backend_server_dev}/blog/`)
+      .get(`${process.env.REACT_APP_backend_server_dev}/achieve/`)
       .then((data) => {
         setData(data.data);
       })
@@ -38,14 +38,14 @@ export default function Team() {
     fetchData();
   }, []);
 
-  const handleDeleteBlog = (id) => {
+  const handleDeleteTeamMember = (id) => {
     const ans = window.confirm("Are you sure you want to delete?");
     console.log(ans);
 
     if (ans) {
       axios
         .delete(
-          `${process.env.REACT_APP_backend_server_dev}/blog/deleteBlog/${id}`
+          `${process.env.REACT_APP_backend_server_dev}/achieve/deleteAchievement/${id}`
         )
         .then(() => {
           fetchData();
@@ -63,17 +63,17 @@ export default function Team() {
         variant="contained"
         color="success"
       >
-        Add Blog
+        Add Achievement
       </Button>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Title</TableCell>
+              <TableCell>Name</TableCell>
               <TableCell align="right">Description</TableCell>
-              <TableCell align="right">Image</TableCell>
-              <TableCell align="right">Date posted:</TableCell>
-              <TableCell align="right">Likes</TableCell>
+              <TableCell align="right">Showcase Image</TableCell>
+              <TableCell align="right"></TableCell>
+              <TableCell align="right"></TableCell>
               <TableCell align="right"></TableCell>
               <TableCell align="right"></TableCell>
             </TableRow>
@@ -85,20 +85,33 @@ export default function Team() {
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <TableCell component="th" scope="row">
-                  {row.Title}
+                  {row.AwardName}
                 </TableCell>
-                <TableCell align="right">{row.Body.slice(0, 100)}...</TableCell>
+                <TableCell align="right">{row.Description}</TableCell>
                 <TableCell align="right">
-                  {" "}
                   <img
-                    src={`${process.env.REACT_APP_backend_server_dev}${row.ImageLink}`}
+                    src={`${process.env.REACT_APP_backend_server_dev}${row.Show}`}
                     height={50}
                     alt=""
                   />
                 </TableCell>
+                <TableCell align="right">
+                  <img
+                    src={`${process.env.REACT_APP_backend_server_dev}${row.Others[0]}`}
+                    height={50}
+                    alt=""
+                  />
+                </TableCell>
+                {row.Others[1] !== "" ? (
+                  <TableCell align="right">
+                    <img
+                      src={`${process.env.REACT_APP_backend_server_dev}${row.Others[1]}`}
+                      height={50}
+                      alt=""
+                    />
+                  </TableCell>
+                ) : null}
 
-                <TableCell align="right">{row.Date}</TableCell>
-                <TableCell align="right">{row.Likes}</TableCell>
                 <TableCell align="right">
                   <EditIcon
                     onClick={() => {
@@ -113,7 +126,7 @@ export default function Team() {
                   <DeleteIcon
                     id="btn-team"
                     onClick={() => {
-                      handleDeleteBlog(row._id);
+                      handleDeleteTeamMember(row._id);
                     }}
                     color="secondary"
                   />

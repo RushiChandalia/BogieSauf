@@ -1,10 +1,11 @@
 .admin {
     color: var(--secondary-color);
-    display: grid;
-    grid-template-columns: auto;
+   display: flex;
+   flex-direction: column;
+    justify-content: flex-start;
     height: 100vh;
     width: 100%;
-    row-gap: 20px;
+    row-gap: 30px;
 }
 
 .admin h1 {
@@ -23,13 +24,6 @@
 }
 
 @media screen and (min-width:992px) {
-    .admin {
-        color: var(--secondary-color);
-        display: grid;
-        grid-template-columns: auto;
-        height: 100vh;
-        width: 100%;
-    }
     .admin h1 {
         text-align: center;
         text-transform: uppercase;
@@ -37,16 +31,21 @@
     .admin-grid {
         color: var(--secondary-color);
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         row-gap: 40px;
-        height: 100vh;
+        height: fit-content;
         width: 100%;
+        border: 1px solid var(--secondary-color);
+        
+       
     }
-    .admin-divider {
-        background-color: var(--accent-color);
-        border: 1px rgba(255, 255, 255, 0.555) solid !important;
-        border-radius: 50%;
-        width: 70%;
-        transform: translateX(20%)!important;
-    }
+   .admin-grid span p{
+       text-align: center;
+       padding: 10px;
+       cursor: pointer;
+   }
+   .active{
+       background-color: var(--accent-color);
+       transition: all 0.1s ease-in-out; 
+   }
 }

@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import Gear from "./Images/animation_500_ku9j2ktm.gif";
 import "react-toastify/dist/ReactToastify.css";
 import Blogs from "./Components/Blogs/Blogs";
-
+import axios from "axios";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -15,6 +15,8 @@ function App() {
     if (loading) {
       window.addEventListener("load", () => {
         setLoading(false);
+        axios
+          .post(`${process.env.REACT_APP_backend_server_dev}/about/incVisitors`)
       });
     } else {
       window.removeEventListener("load", () => {});
