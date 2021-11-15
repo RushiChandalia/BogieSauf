@@ -50,7 +50,7 @@ const AboutUs = () => {
           <label>About:</label>
           <textarea
             rows="10"
-            id="outlined-input"
+            id="outlined-input-about"
             aria-label="minimum height"
             onChange={(e) => {
               setState({ ...state, about: e.target.value });
@@ -64,7 +64,7 @@ const AboutUs = () => {
           <label>Mission:</label>
           <textarea
             rows="8"
-            id="outlined-input"
+            id="outlined-input-about"
             aria-label="minimum height"
             value={state.mission}
             label="Mission"

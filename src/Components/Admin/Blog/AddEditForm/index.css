@@ -1,0 +1,32 @@
+.modal-form{
+   
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-add{
+    background-color: white;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    row-gap: 40px;
+    padding: 20px;
+}
+.form-add span{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+.SocialLinks{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+#outlined-input{
+    border: 1px solid gray;
+    color: black !important;
+}

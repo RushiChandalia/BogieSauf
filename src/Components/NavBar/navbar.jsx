@@ -5,6 +5,7 @@ import "./navbarDesktop.css";
 import Logo from "../../Images/bogie_sauf_logo.png";
 import "./navbarMobile.css";
 import Drawer from "./Drawer/mobileDrawer";
+import { Link } from "react-router-dom";
 const Navbar = () => {
     
   let lastScroll = 0;
@@ -48,7 +49,7 @@ const Navbar = () => {
           <a href="/#Products">Products</a>
           <a href="/#Achievements">Achievements</a>
           <a href="/#Contact Us">Contact Us</a>
-
+          <Link to="/Blogs">Blogs</Link>
         </div>
         <Drawer />
       

@@ -5,6 +5,8 @@ import Admin from "./Components/Admin/Admin.jsx";
 import { useEffect, useState } from "react";
 import Gear from "./Images/animation_500_ku9j2ktm.gif";
 import "react-toastify/dist/ReactToastify.css";
+import Blogs from "./Components/Blogs/Blogs";
+
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -34,6 +36,7 @@ function App() {
             <Switch>
               <Route exact path="/" component={Main} />
               <Route path="/admin" component={Admin} />
+              <Route path="/Blogs" component={Blogs} />
             </Switch>
           </>
         )}

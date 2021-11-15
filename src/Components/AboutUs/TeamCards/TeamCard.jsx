@@ -32,7 +32,10 @@ const TeamCard = () => {
             className="card-wrapper"
             key={index}
           >
-            <img src={`${process.env.REACT_APP_backend_server_dev}${info.profile}`} alt="" />
+            <img
+              src={`${process.env.REACT_APP_backend_server_dev}${info.profile}`}
+              alt=""
+            />
             <div className="card-content">
               <h2>{info.name}</h2>
               <p>{info.position}</p>
@@ -40,6 +43,7 @@ const TeamCard = () => {
                 {info.socialMedia.map((soc, index) => {
                   switch (soc.plat) {
                     case "LinkedIn":
+                      if (soc.Link === "") break;
                       return (
                         <SocialLinks
                           index={index}
@@ -50,6 +54,7 @@ const TeamCard = () => {
                       );
 
                     case "Twitter":
+                      if (soc.Link === "") break;
                       return (
                         <SocialLinks
                           index={index}
@@ -60,6 +65,7 @@ const TeamCard = () => {
                       );
 
                     case "Instagram":
+                      if (soc.Link === "") break;
                       return (
                         <SocialLinks
                           index={index}
@@ -70,6 +76,7 @@ const TeamCard = () => {
                       );
 
                     case "Facebook":
+                      if(soc.Link ==="") break;
                       return (
                         <SocialLinks
                           index={index}
@@ -80,6 +87,7 @@ const TeamCard = () => {
                       );
 
                     case "Youtube":
+                      if(soc.Link ==="") break;
                       return (
                         <SocialLinks
                           index={index}
@@ -89,6 +97,7 @@ const TeamCard = () => {
                         />
                       );
                     case "Blogspot":
+                      if(soc.Link ==="") break;
                       return (
                         <SocialLinks
                           index={index}
