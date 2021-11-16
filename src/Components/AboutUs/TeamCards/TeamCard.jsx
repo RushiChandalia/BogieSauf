@@ -32,6 +32,7 @@ const TeamCard = () => {
             className="card-wrapper"
             key={index}
           >
+       
             <img
               src={`${process.env.REACT_APP_backend_server_dev}${info.profile}`}
               alt=""

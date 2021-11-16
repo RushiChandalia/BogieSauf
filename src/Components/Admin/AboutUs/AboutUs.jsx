@@ -22,7 +22,7 @@ const AboutUs = () => {
 
   const handleSubmit = () => {
     axios
-      .put(`${process.env.REACT_APP_backend_server_dev}about/editAbout`, state)
+      .put(`${process.env.REACT_APP_backend_server_dev}/about/editAbout`, state)
       .then(() => {
         toast.success("About Us Successfully Updated!!", {
           position: "bottom-left",

@@ -4,6 +4,7 @@ import "./aboutMobile1.css";
 import "./aboutDesktop.css";
 import TeamJson from "./TeamCards/Team.json";
 import axios from "axios";
+import { Skeleton } from "@mui/material";
 const About = () => {
   const [tab, setTab] = useState("About");
   const [aboutData, setAboutData] = useState({
@@ -25,10 +26,7 @@ const About = () => {
       })
       .catch((err) => console.log(err));
   }, []);
-  if (aboutData.loading) {
-    return null;
-  }
-  if (!aboutData.loading) {
+  
     return (
       <div id="About Us" className="about">
         <div className="container about-mobile">
@@ -39,13 +37,14 @@ const About = () => {
               data-aos-anchor=".about-mobile span h1"
               data-aos-delay="200"
             >
-              {aboutData.about}
+
+              {aboutData.loading ? <Skeleton variant="text"/> : aboutData.about}
             </p>
           </span>
           <span>
             <h1 data-aos="fade-up">Mission</h1>
             <p data-aos="fade-up" data-aos-delay="200">
-              {aboutData.mission}
+              {aboutData.loading ? <Skeleton variant="text"/> :aboutData.mission}
             </p>
           </span>
           <CardGridMobile />
@@ -94,7 +93,7 @@ const About = () => {
         </div>
       </div>
     );
-  }
+
 };
 
 export default About;
