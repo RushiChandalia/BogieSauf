@@ -42,8 +42,9 @@ const TeamCard = () => {
               <p>{info.position}</p>
               <div className="social-media">
                 {info.socialMedia.map((soc, index) => {
+                  console.log(soc)
                   switch (soc.plat) {
-                    case "LinkedIn":
+                    case "Linkedin":
                       if (soc.Link === "") break;
                       return (
                         <SocialLinks
