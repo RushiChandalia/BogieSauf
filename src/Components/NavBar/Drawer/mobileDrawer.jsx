@@ -31,18 +31,27 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {["Home","About Us", "Products","Achievements", "Contact Us"].map(
-          (text, index) => (
-            <div key={index}>
-              <a key={index} id="ham-link" href={`/#${text}`}>
-                <ListItem button key={text}>
-                  <ListItemText primary={text} />
-                </ListItem>
-              </a>
-              <Divider />
-            </div>
-          )
-        )}
+        {[
+          "Home",
+          "About Us",
+          "Products",
+          "Achievements",
+          "Contact Us",
+          "Blogs",
+        ].map((text, index) => (
+          <div key={index}>
+            <a
+              key={index}
+              id="ham-link"
+              href={`${text === "Blogs" ? "/Blogs" : `/#${text}`}`}
+            >
+              <ListItem button key={text}>
+                <ListItemText primary={text} />
+              </ListItem>
+            </a>
+            <Divider />
+          </div>
+        ))}
       </List>
     </Box>
   );
