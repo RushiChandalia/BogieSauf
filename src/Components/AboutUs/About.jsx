@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import TeamCard from "./TeamCards/TeamCard";
 import "./aboutMobile1.css";
 import "./aboutDesktop.css";
-import TeamJson from "./TeamCards/Team.json";
 import axios from "axios";
 import { Skeleton } from "@mui/material";
 const About = () => {
