@@ -9,6 +9,10 @@
       name="description"
       content="Web site created using create-react-app"
     />
+    <script
+      src="https://cdn.tiny.cloud/1/grk02t8fo4s4ss8pbj28iwzj1ndi4l3nf6xwzkpms4gv4ig2/tinymce/5/tinymce.min.js"
+      referrerpolicy="origin"
+    ></script>
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -26,8 +30,14 @@
       href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet"
     />
-    <link href='https://fonts.googleapis.com/css?family=Sora' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Epilogue' rel='stylesheet'>
+    <link
+      href="https://fonts.googleapis.com/css?family=Sora"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Epilogue"
+      rel="stylesheet"
+    />
 
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -53,6 +63,15 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <script>
+      tinymce.init({
+        selector: "textarea",
+        plugins:
+          "advlist autolink lists link image charmap print preview hr anchor pagebreak",
+        toolbar_mode: "floating",
+      });
+    </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();

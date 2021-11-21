@@ -103,9 +103,7 @@ const CardGridMobile = () => {
     <div className="about-team">
       <h1 data-aos="fade-up">Contributors</h1>
       <div className="cards">
-        {TeamJson.Team.map((mem, index) => (
-          <TeamCard index={index} key={index} info={mem} />
-        ))}
+      <TeamCard />
       </div>
     </div>
   );
