@@ -13,6 +13,7 @@ import "./Blog.css";
 import axios from "axios";
 import AddForm from "./AddEditForm/AddForm";
 import EditForm from "./AddEditForm/EditForm";
+import moment from "moment";
 
 export default function Team() {
   const [data, setData] = React.useState([]);
@@ -72,7 +73,7 @@ export default function Team() {
               <TableCell>Title</TableCell>
               <TableCell align="right">Description</TableCell>
               <TableCell align="right">Image</TableCell>
-              <TableCell align="right">Date posted:</TableCell>
+              <TableCell align="right">Date posted</TableCell>
               <TableCell align="right">Likes</TableCell>
               <TableCell align="right"></TableCell>
               <TableCell align="right"></TableCell>
@@ -97,7 +98,7 @@ export default function Team() {
                   />
                 </TableCell>
 
-                <TableCell align="right">{row.Date}</TableCell>
+                <TableCell align="right">{moment(row.Date).format("MMM Do YY")}</TableCell>
                 <TableCell align="right">{row.Likes}</TableCell>
                 <TableCell align="right">
                   <EditIcon
