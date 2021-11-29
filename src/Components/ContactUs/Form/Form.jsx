@@ -241,7 +241,7 @@ const Form = () => {
               onCheckboxChange(e);
             }}
           />
-          <label>Bike</label>
+          <label>TWO WHEELER</label>
           <br />
         </span>
         <span>
@@ -254,7 +254,7 @@ const Form = () => {
               onCheckboxChange(e);
             }}
           />
-          <label>Auto Rickshaw</label>
+          <label>THREE WHEELER</label>
           <br />
         </span>
         <span>
@@ -267,7 +267,7 @@ const Form = () => {
               onCheckboxChange(e);
             }}
           />
-          <label>Car</label>
+          <label>FOUR WHEELER</label>
           <br />
         </span>
        
@@ -282,7 +282,7 @@ const Form = () => {
               onCheckboxChange(e);
             }}
           />
-          <label>Truck</label>
+          <label>SIX - EIGHT WHEELER</label>
           <br />
         </span>
         <span>
@@ -295,7 +295,7 @@ const Form = () => {
               onCheckboxChange(e);
             }}
           />
-          <label>Multi-Wheel vehicle</label>
+          <label>MULTI WHEEL VEHICLE</label>
           <br />
         </span>
         <span>
@@ -308,7 +308,7 @@ const Form = () => {
               onCheckboxChange(e);
             }}
           />
-          <label>Special-purpose vehicle</label>
+          <label>SPECIAL PURPOSE VEHICLE</label>
           <br />
         </span>
       </div>
