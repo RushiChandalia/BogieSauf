@@ -18,7 +18,7 @@ export default function BasicCard({ blog, loading }) {
         <Skeleton variant="rectangular" height={200} />
       ) : (
         <img
-          src={`${process.env.REACT_APP_backend_server_dev}${blog.ImageLink}`}
+          src={blog.ImageLink}
           id="blog-image"
           alt=""
         />

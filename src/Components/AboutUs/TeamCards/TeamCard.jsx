@@ -34,7 +34,7 @@ const TeamCard = () => {
           >
        
             <img
-              src={`${process.env.REACT_APP_backend_server_dev}${info.profile}`}
+              src={info.profile}
               alt=""
             />
             <div className="card-content">

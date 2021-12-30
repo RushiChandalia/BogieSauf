@@ -29,7 +29,7 @@ export default function BasicModal({ open, handleClose, blog }) {
           <div className="modal-Blog">
             <div className="blog-body">
               <img
-                src={`${process.env.REACT_APP_backend_server_dev}${blog.ImageLink}`}
+                src={blog.ImageLink}
                 id="blog-image-modal"
                 alt=""
               />

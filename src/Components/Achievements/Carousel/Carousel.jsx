@@ -61,7 +61,7 @@ export default function Carousel({ setOpen, setState }) {
             return (
               <SwiperSlide key={index}>
                 <img
-                  src={`${process.env.REACT_APP_backend_server_dev}${a.Show}`}
+                  src={a.Show}
                   alt="RP"
                   height={200}
                   onClick={() => {
@@ -89,7 +89,7 @@ export default function Carousel({ setOpen, setState }) {
                     <Skeleton variant="rectangular" height={150} width={150} />
                   ) : (
                     <img
-                      src={`${process.env.REACT_APP_backend_server_dev}${a.Show}`}
+                      src={a.Show}
                       alt=""
                     />
                   )}

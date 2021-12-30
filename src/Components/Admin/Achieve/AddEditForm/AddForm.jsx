@@ -4,7 +4,8 @@ import Modal from "@mui/material/Modal";
 import "./index.css";
 import { TextField } from "@mui/material";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
+import { uploadtos3 } from "../../../../utils/uploadTos3";
 
 export default function BasicModal({ open, handleClose }) {
   const [mem, setMem] = React.useState({
@@ -27,43 +28,55 @@ export default function BasicModal({ open, handleClose }) {
     }
   };
 
-  const handlePrimaryImageUpload = (e) => {
-    const data = new FormData();
-    data.append("file", e.target.files[0]);
-    console.log(data);
-    axios
-      .post(
-        `${process.env.REACT_APP_backend_server_dev}/uploadPrimaryImage`,
-        data
-      )
-      .then((res) => {
-        setMem({
-          ...mem,
-          Show: `/static/AchievementImages/PrimaryImage/${res.data.originalname}`,
-        });
+  const handlePrimaryImageUpload = async (e) => {
+    const file = e.target.files[0];
+    const dataurl = await uploadtos3();
+
+    axios.put(dataurl.data, file).then(async () => {
+      const imageUrl = dataurl.data.split("?")[0];
+      setMem({
+        ...mem,
+        Show: imageUrl,
       });
+      await toast.success("Image Added Successfully!!", {
+        position: "bottom-left",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    });
   };
-  const handleSecondaryImageUpload = (e, num) => {
-    const data = new FormData();
-    data.append("file", e.target.files[0]);
-    console.log(data);
-    axios
-      .post(
-        `${process.env.REACT_APP_backend_server_dev}/uploadSecondaryImage`,
-        data
-      )
-      .then((res) => {
-        mem.Others[
-          num
-        ] = `/static/AchievementImages/SecondaryImage/${res.data.originalname}`;
+  const handleSecondaryImageUpload = async (e, num) => {
+    const file = e.target.files[0];
+    const dataurl = await uploadtos3();
+
+    axios.put(dataurl.data, file).then(async () => {
+      const imageUrl = dataurl.data.split("?")[0];
+      console.log(imageUrl);
+      mem.Others[num] = imageUrl;
+      await toast.success("Image Added Successfully!!", {
+        position: "bottom-left",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
       });
+    });
   };
   const handleSubmit = async () => {
     if (mem.Show === "") {
       window.alert("Please fill the required fields");
     } else {
       axios
-        .post(`${process.env.REACT_APP_backend_server_dev}/achieve/addAchievement`, mem)
+        .post(
+          `${process.env.REACT_APP_backend_server_dev}/achieve/addAchievement`,
+          mem
+        )
         .then(() => {
           toast.success("Achievement Added Successfully!!", {
             position: "bottom-left",
@@ -151,6 +164,16 @@ export default function BasicModal({ open, handleClose }) {
           </div>
         </div>
       </Modal>
+      <ToastContainer
+        className="toastContainer"
+        position="bottom-left"
+        autoClose={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+      />
     </div>
   );
 }

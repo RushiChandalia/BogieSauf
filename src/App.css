@@ -53,3 +53,7 @@ body{
 .App-loader img{
   height: 50%;
 }
+.toastContainer{
+  font-size:15px;
+  text-transform: capitalize;
+}

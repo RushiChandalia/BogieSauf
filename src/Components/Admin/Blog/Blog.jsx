@@ -92,7 +92,7 @@ export default function Team() {
                 <TableCell align="right">
                   {" "}
                   <img
-                    src={`${process.env.REACT_APP_backend_server_dev}${row.ImageLink}`}
+                    src={row.ImageLink}
                     height={50}
                     alt=""
                   />

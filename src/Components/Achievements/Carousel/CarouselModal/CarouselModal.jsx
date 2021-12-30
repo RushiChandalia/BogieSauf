@@ -12,7 +12,7 @@ export default function CarouselModal({ open, handleClose, state }) {
             return (
               <img
                 key={index}
-                src={`${process.env.REACT_APP_backend_server_dev}${t}`}
+                src={t}
                 id="modal-images"
                 className={`newspaper_${state}`}
                 alt=""

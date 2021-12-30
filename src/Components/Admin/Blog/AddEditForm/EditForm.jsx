@@ -4,7 +4,8 @@ import Modal from "@mui/material/Modal";
 import "./index.css";
 import { TextField } from "@mui/material";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
+import { uploadtos3 } from "../../../../utils/uploadTos3";
 
 export default function BasicModal({ open, handleClose, id, data }) {
   const row = data.filter((t) => t._id === id);
@@ -59,19 +60,26 @@ export default function BasicModal({ open, handleClose, id, data }) {
         });
     }
   };
-  const handleImageUpload = (e) => {
-    const data = new FormData();
-    data.append("file", e.target.files[0]);
-
-    axios
-      .post(`${process.env.REACT_APP_backend_server_dev}/uploadBlogImage`, data)
-      .then((res) => {
-        console.log(res);
-        setMem({
-          ...mem,
-          ImageLink: `/static/BlogImage/${res.data.filename}`,
-        });
+  const handleImageUpload = async (e) => {
+    const file = e.target.files[0];
+    const dataurl = await uploadtos3();
+    console.log(dataurl);
+    axios.put(dataurl.data, file).then(async () => {
+      const imageUrl = dataurl.data.split("?")[0];
+      setMem({
+        ...mem,
+        ImageLink: imageUrl,
       });
+      await toast.success("Image Added Successfully!!", {
+        position: "bottom-left",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    });
   };
   return (
     <div>
@@ -108,11 +116,7 @@ export default function BasicModal({ open, handleClose, id, data }) {
                 name="Image-Upload"
                 id=""
               />
-              <img
-                src={`${process.env.REACT_APP_backend_server_dev}${mem.ImageLink}`}
-                height={50}
-                alt=""
-              />
+              <img src={mem.ImageLink} height={50} alt="" />
             </span>
 
             <Button
@@ -125,6 +129,16 @@ export default function BasicModal({ open, handleClose, id, data }) {
           </div>
         </div>
       </Modal>
+      <ToastContainer
+        className="toastContainer"
+        position="bottom-left"
+        autoClose={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+      />
     </div>
   );
 }

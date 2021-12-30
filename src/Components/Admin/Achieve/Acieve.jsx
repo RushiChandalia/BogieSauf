@@ -90,7 +90,7 @@ export default function Achievements() {
                 <TableCell align="right">{row.Description}</TableCell>
                 <TableCell align="right">
                   <img
-                    src={`${process.env.REACT_APP_backend_server_dev}${row.Show}`}
+                    src={row.Show}
                     height={50}
                     alt=""
                   />

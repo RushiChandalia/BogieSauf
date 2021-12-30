@@ -88,7 +88,7 @@ export default function Team() {
                 <TableCell align="right">{row.position}</TableCell>
                 <TableCell align="right">
                   <img
-                    src={`${process.env.REACT_APP_backend_server_dev}${row.profile}`}
+                    src={row.profile}
                     height={50}
                     alt=""
                   />

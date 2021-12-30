@@ -4,7 +4,8 @@ import Modal from "@mui/material/Modal";
 import "./index.css";
 import { TextField } from "@mui/material";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { toast,ToastContainer } from "react-toastify";
+import {uploadtos3} from "../../../../utils/uploadTos3"
 
 export default function BasicModal({ open, handleClose }) {
   const [mem, setMem] = React.useState({
@@ -71,16 +72,28 @@ export default function BasicModal({ open, handleClose }) {
       mem.socialMedia[3].Link = e.target.value;
     }
   };
-  const handleImageUpload = (e) => {
-    const data = new FormData();
-    data.append("file", e.target.files[0]);
-    console.log(data);
+  const handleImageUpload = async (e) => {
+  
+    const file = e.target.files[0]
+    const dataurl = await uploadtos3()
+
     axios
-      .post(`${process.env.REACT_APP_backend_server_dev}/uploadCharity`, data)
-      .then((res) => {
+      .put(dataurl.data,file )
+      .then(async() => {
+        const imageUrl = dataurl.data.split('?')[0]
+        
         setMem({
           ...mem,
-          profile: `/static/TeamImage/${res.data.originalname}`,
+          profile: imageUrl,
+        });
+        await toast.success("Image Added Successfully!!", {
+          position: "bottom-left",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
         });
       });
   };
@@ -90,8 +103,8 @@ export default function BasicModal({ open, handleClose }) {
     } else {
       axios
         .post(`${process.env.REACT_APP_backend_server_dev}/team/addMember`, mem)
-        .then(() => {
-          toast.success("Member Added Successfully!!", {
+        .then(async() => {
+          await toast.success("Member Added Successfully!!", {
             position: "bottom-left",
             autoClose: 3000,
             hideProgressBar: false,
@@ -223,6 +236,16 @@ export default function BasicModal({ open, handleClose }) {
           </div>
         </div>
       </Modal>
+      <ToastContainer
+        className="toastContainer"
+        position="bottom-left"
+        autoClose={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+      />
     </div>
   );
 }
