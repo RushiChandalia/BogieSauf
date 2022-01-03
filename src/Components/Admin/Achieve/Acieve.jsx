@@ -97,7 +97,7 @@ export default function Achievements() {
                 </TableCell>
                 <TableCell align="right">
                   <img
-                    src={`${process.env.REACT_APP_backend_server_dev}${row.Others[0]}`}
+                    src={row.Others[0]}
                     height={50}
                     alt=""
                   />
@@ -105,7 +105,7 @@ export default function Achievements() {
                 {row.Others[1] !== "" ? (
                   <TableCell align="right">
                     <img
-                      src={`${process.env.REACT_APP_backend_server_dev}${row.Others[1]}`}
+                      src={row.Others[1]}
                       height={50}
                       alt=""
                     />
